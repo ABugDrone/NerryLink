@@ -32,7 +32,7 @@ function NerryLinkLogo() {
         <span className={`text-[9px] font-semibold uppercase tracking-widest ${
           isLight ? 'text-[#DC2626]' : 'text-red-400/80'
         }`}>
-          Computer &amp; Gadgets
+          Gadget Store
         </span>
       </div>
     </Link>

@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
         <div className="relative z-10 px-6 pb-10 max-w-5xl mx-auto w-full animate-fade-up">
           <span className="inline-block glass px-4 py-1.5 rounded-full text-xs font-semibold text-sky-300 uppercase tracking-widest mb-3">About Us</span>
-          <h1 className="text-3xl sm:text-5xl font-black text-white">NerryLink Computer and Gadgets</h1>
+          <h1 className="text-3xl sm:text-5xl font-black text-white">NerryLink Gadget Store</h1>
           <p className="mt-2 text-white/60">
             <span className="text-emerald-400 font-semibold">CAC Registered Business</span> · NerryLink&apos;s Global Services
           </p>
@@ -35,13 +35,13 @@ export default function AboutPage() {
           <div className="glass p-8 rounded-2xl space-y-4 animate-fade-up">
             <h2 className="text-xl font-bold text-white">Our Story</h2>
             <p className="text-white/70 leading-relaxed">
-              NerryLink Computer and Gadgets is a <strong className="text-emerald-400">CAC registered Nigerian business</strong> (RC: NerryLink&apos;s Global Services) dedicated to making quality technology accessible to everyone — from individual consumers to large institutions.
+              NerryLink Gadget Store is a <strong className="text-emerald-400">CAC registered Nigerian business</strong> (RC: NerryLink&apos;s Global Services) dedicated to making quality technology accessible to everyone — from individual consumers to large institutions.
             </p>
             <p className="text-white/70 leading-relaxed">
-              We serve <strong className="text-white">B2C</strong> (retail), <strong className="text-white">B2B</strong> (businesses), <strong className="text-white">B2G</strong> (government), and <strong className="text-white">B2NGO</strong> (non-profits) — offering retail and wholesale supply of laptops, smartphones, gadgets, and automotive products.
+              We serve <strong className="text-white">B2C</strong> (retail), <strong className="text-white">B2B</strong> (businesses), <strong className="text-white">B2G</strong> (government), and <strong className="text-white">B2NGO</strong> (non-profits) — offering retail and wholesale supply of laptops, smartphones, gadgets, and bags.
             </p>
             <p className="text-white/70 leading-relaxed">
-              Beyond tech, we offer <strong className="text-white">luxury and standard car sales and rental</strong> — for executives, corporate fleets, government delegations, and individuals.
+              We stock a wide range of laptop bags, backpacks, portable handbags, and executive office bags — perfect for professionals, students, and travellers.
             </p>
             <p className="text-white/70 leading-relaxed">
               Our certified technicians provide fast repairs, software installations, hardware upgrades, and expert consultation — all under one roof.
@@ -92,10 +92,140 @@ export default function AboutPage() {
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-sky-400 mt-0.5 flex-shrink-0"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                   <div>
                     <p className="text-white font-medium">Facebook</p>
-                    <a href="https://www.facebook.com/profile.php?id=61580632770804" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-300 transition-colors">NerryLink Computer and Gadgets</a>
+                    <a href="https://web.facebook.com/profile.php?id=100067730592515" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-300 transition-colors">NerryLink Gadget Store</a>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Vision, Mission & Core Values */}
+        <div className="mb-12 animate-fade-up">
+          <div className="text-center mb-8">
+            <span className="glass px-4 py-1.5 rounded-full text-xs font-semibold text-violet-300 uppercase tracking-widest">What Drives Us</span>
+            <h2 className="mt-4 text-2xl sm:text-3xl font-black text-white">Vision, Mission &amp; Values</h2>
+          </div>
+
+          {/* Vision & Mission — side by side */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
+
+            {/* Vision */}
+            <div className="glass p-6 rounded-2xl border border-violet-500/20 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-violet-500/10 rounded-full -translate-y-8 translate-x-8 blur-2xl" aria-hidden="true" />
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-violet-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-violet-300" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+                    <path d="M2 12h2M20 12h2M12 2v2M12 20v2"/>
+                  </svg>
+                </div>
+                <h3 className="text-white font-black text-lg">Our Vision</h3>
+              </div>
+              <p className="text-white/70 leading-relaxed text-sm">
+                To be Nigeria&apos;s most trusted and accessible technology partner — bridging the gap between world-class gadgets and everyday Nigerians, from the individual student to the largest government institution.
+              </p>
+            </div>
+
+            {/* Mission */}
+            <div className="glass p-6 rounded-2xl border border-sky-500/20 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-sky-500/10 rounded-full -translate-y-8 translate-x-8 blur-2xl" aria-hidden="true" />
+              <div className="flex items-center gap-3 mb-3">
+                <div className="w-10 h-10 rounded-xl bg-sky-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-sky-300" aria-hidden="true">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <path d="M22 4L12 14.01l-3-3"/>
+                  </svg>
+                </div>
+                <h3 className="text-white font-black text-lg">Our Mission</h3>
+              </div>
+              <p className="text-white/70 leading-relaxed text-sm">
+                To deliver quality, affordable, and genuine technology products and services with honesty, speed, and care — empowering individuals, businesses, NGOs, and government agencies to work smarter and live better through technology.
+              </p>
+            </div>
+          </div>
+
+          {/* Core Values */}
+          <div className="glass p-6 sm:p-8 rounded-2xl border border-white/10">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-300" aria-hidden="true">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <h3 className="text-white font-black text-lg">Core Values</h3>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                {
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+                  ),
+                  title: 'Integrity',
+                  desc: 'We sell only genuine products and give honest advice — no shortcuts, no deception.',
+                  color: 'text-emerald-300',
+                  bg: 'bg-emerald-500/15',
+                  border: 'border-emerald-500/20',
+                },
+                {
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                  ),
+                  title: 'Customer First',
+                  desc: 'Every decision we make starts with one question — what is best for our customer?',
+                  color: 'text-sky-300',
+                  bg: 'bg-sky-500/15',
+                  border: 'border-sky-500/20',
+                },
+                {
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                  ),
+                  title: 'Speed & Reliability',
+                  desc: 'Fast responses, prompt delivery, and dependable after-sales support — every time.',
+                  color: 'text-amber-300',
+                  bg: 'bg-amber-500/15',
+                  border: 'border-amber-500/20',
+                },
+                {
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  ),
+                  title: 'Excellence',
+                  desc: 'We hold ourselves to the highest standard in product quality, service delivery, and technical expertise.',
+                  color: 'text-violet-300',
+                  bg: 'bg-violet-500/15',
+                  border: 'border-violet-500/20',
+                },
+                {
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                  ),
+                  title: 'Community',
+                  desc: 'We are rooted in Nigeria. We invest in local communities, support NGOs, and empower small businesses.',
+                  color: 'text-red-300',
+                  bg: 'bg-red-500/15',
+                  border: 'border-red-500/20',
+                },
+                {
+                  icon: (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  ),
+                  title: 'Trust & Transparency',
+                  desc: 'Clear pricing, honest warranties, and open communication — you always know exactly what you are getting.',
+                  color: 'text-teal-300',
+                  bg: 'bg-teal-500/15',
+                  border: 'border-teal-500/20',
+                },
+              ].map(({ icon, title, desc, color, bg, border }) => (
+                <div key={title} className={`flex gap-3 p-4 rounded-xl border ${border} ${bg}`}>
+                  <div className={`flex-shrink-0 mt-0.5 ${color}`}>{icon}</div>
+                  <div>
+                    <p className={`font-bold text-sm ${color}`}>{title}</p>
+                    <p className="text-white/60 text-xs mt-1 leading-relaxed">{desc}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

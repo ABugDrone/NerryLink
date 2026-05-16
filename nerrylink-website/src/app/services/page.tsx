@@ -10,7 +10,7 @@ export default function ServicesPage() {
         <div className="relative z-10 px-6 pb-10 max-w-7xl mx-auto w-full animate-fade-up">
           <span className="inline-block glass px-4 py-1.5 rounded-full text-xs font-semibold text-emerald-300 uppercase tracking-widest mb-3">Services</span>
           <h1 className="text-3xl sm:text-5xl font-black text-white">Expert Tech Services</h1>
-          <p className="mt-2 text-white/60 max-w-xl">Repairs, upgrades, wholesale supply, government procurement &amp; luxury automotive</p>
+          <p className="mt-2 text-white/60 max-w-xl">Repairs, upgrades, wholesale supply, government procurement &amp; bags</p>
         </div>
       </section>
       <div className="relative h-32 overflow-hidden">

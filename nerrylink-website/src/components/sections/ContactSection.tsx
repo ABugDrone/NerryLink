@@ -39,12 +39,12 @@ export function ContactSection() {
                   <p className="text-xs text-red-400/80">Closed Sundays</p>
                 </div>
               </div>
-              <a href="https://www.facebook.com/profile.php?id=61580632770804" target="_blank" rel="noopener noreferrer"
+              <a href="https://web.facebook.com/profile.php?id=100067730592515" target="_blank" rel="noopener noreferrer"
                 className="flex items-center gap-3 text-sky-400 hover:text-sky-300 transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                 <div>
                   <p className="font-semibold text-sm">Facebook</p>
-                  <p className="text-xs text-sky-400/70">NerryLink Computer and Gadgets</p>
+                  <p className="text-xs text-sky-400/70">NerryLink Gadget Store</p>
                 </div>
               </a>
             </div>

@@ -10,10 +10,10 @@ import { useFOMOStore } from '@/store/fomoStore';
 import { products } from '@/lib/products';
 
 const categories = [
-  { id: 'pcs-laptops', label: 'PCs & Laptops' },
+  { id: 'pcs-laptops', label: 'Laptops & Desktops' },
   { id: 'mobile', label: 'Mobile Devices' },
   { id: 'gadgets', label: 'Gadgets & Accessories' },
-  { id: 'automotive', label: 'Automotive' },
+  { id: 'bags', label: 'Bags' },
 ] as const;
 
 const productVideos: Record<string, string> = {
@@ -34,7 +34,7 @@ function getCardVariants(isMobile: boolean, cols: number) {
 
 export function ProductShowcase() {
   const router = useRouter();
-  const [activeCategory, setActiveCategory] = useState<'pcs-laptops' | 'mobile' | 'gadgets' | 'automotive'>('pcs-laptops');
+  const [activeCategory, setActiveCategory] = useState<'pcs-laptops' | 'mobile' | 'gadgets' | 'bags'>('pcs-laptops');
   const [isMobile, setIsMobile] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const tabListRef = useRef<HTMLDivElement>(null);
@@ -116,7 +116,8 @@ export function ProductShowcase() {
 
         {/* Scroll progress bar — mobile only */}
         {isMobile && (
-          <div className="mx-4 mt-2 h-[3px] rounded-full bg-white/10 overflow-hidden sm:hidden">
+          <div className="mx-4 mt-2 h-[3px] rounded-full overflow-hidden sm:hidden bg-white/10 [data-theme='light']:bg-black/10"
+            style={{ background: 'rgba(0,0,0,0.1)' }}>
             <motion.div
               className="h-full rounded-full bg-gradient-to-r from-sky-400 to-violet-500"
               style={{ width: `${scrollProgress * 100}%` }}

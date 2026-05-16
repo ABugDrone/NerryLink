@@ -60,14 +60,103 @@
    BASE RESET
    =================================================== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; font-size: 17px; }
+
+/* ===================================================
+   TYPOGRAPHY SYSTEM
+   H1            → Montserrat (sans-serif, black/extrabold)
+   H2, H3, body  → Lora (serif, readable, editorial)
+   Footer, UI    → Roboto (clean, neutral)
+   =================================================== */
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75;
   background-color: var(--bg-base);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* H1 — Montserrat, bold sans-serif */
+h1,
+.font-h1 {
+  font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* H2, H3 — Lora serif */
+h2,
+.font-h2 {
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h3,
+.font-h3 {
+  font-family: 'Lora', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* Footer, nav, badges, small UI labels → Roboto */
+footer,
+nav,
+.font-ui,
+label,
+button,
+input,
+select,
+textarea,
+.text-xs,
+.text-sm,
+.uppercase {
+  font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+}
+
+/* Tailwind font-black / font-extrabold on headings → Montserrat */
+.font-black,
+.font-extrabold {
+  font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
+}
+
+/* Bump paragraph readability */
+p {
+  font-size: 1.0625rem;
+  line-height: 1.8;
+}
+
+/* Section tag pills */
+.section-tag {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  font-size: 0.7rem;
+}
+
+/* Ensure Tailwind font-bold / font-semibold on h1/h2/h3 don't reset the family */
+h1.font-bold, h1.font-semibold, h1.font-medium,
+h1.font-black, h1.font-extrabold {
+  font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
+}
+h2.font-bold, h2.font-semibold, h2.font-black,
+h3.font-bold, h3.font-semibold, h3.font-black {
+  font-family: 'Lora', Georgia, serif;
+}
+
+/* Increase base sizes for better visibility */
+@media (min-width: 640px) {
+  html { font-size: 18px; }
+}
+@media (min-width: 1024px) {
+  html { font-size: 18px; }
 }
 
 /* Light theme body background — pearl gradient with subtle mesh */
@@ -383,6 +472,21 @@ body {
 [data-theme="light"] .client-badge {
   background: rgba(107,33,168,0.06) !important;
   border-color: rgba(107,33,168,0.2) !important;
+}
+
+/* ===================================================
+   PARTNERS SCROLL ANIMATION
+   =================================================== */
+@keyframes partnersScroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.partners-scroll {
+  animation: partnersScroll 28s linear infinite;
+}
+.partners-scroll:hover {
+  animation-play-state: paused;
 }
 
 /* ===================================================

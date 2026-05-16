@@ -6,19 +6,19 @@ import { WhatsAppIntegration } from '@/components/forms/WhatsAppIntegration';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
 
 export const metadata: Metadata = {
-  title: 'NerryLink Computer and Gadgets — Nigeria\'s Trusted Tech Store',
-  description: 'Shop laptops, phones, automotive accessories and book expert tech services at NerryLink Computer and Gadgets, Nigeria.',
+  title: 'NerryLink Gadget Store — Nigeria\'s Trusted Tech Store',
+  description: 'Shop laptops, phones, bags and book expert tech services at NerryLink Gadget Store, Nigeria.',
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
     apple: '/logo.svg',
   },
   openGraph: {
-    title: 'NerryLink Computer and Gadgets',
-    description: 'Laptops, Phones, Automotive & Expert Tech Services in Nigeria.',
+    title: 'NerryLink Gadget Store',
+    description: 'Laptops, Phones, Bags & Expert Tech Services in Nigeria.',
     url: 'https://nerrylinks.web.app',
-    siteName: 'NerryLink Computer and Gadgets',
-    images: [{ url: '/assets/images/Home Hero section.jpeg', width: 1200, height: 630, alt: 'NerryLink Computer and Gadgets' }],
+    siteName: 'NerryLink Gadget Store',
+    images: [{ url: '/assets/images/Home Hero section.jpeg', width: 1200, height: 630, alt: 'NerryLink Gadget Store' }],
     type: 'website',
   },
 };
@@ -31,6 +31,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="shortcut icon" href="/favicon.svg" />
         <link rel="apple-touch-icon" href="/logo.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
         {/* Set theme before first paint to avoid flash */}
         <script dangerouslySetInnerHTML={{ __html: `
           (function(){

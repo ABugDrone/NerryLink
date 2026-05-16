@@ -3,11 +3,32 @@ import { GlassButton } from '@/components/ui/GlassButton';
 import { CountdownTimer } from '@/components/fomo/CountdownTimer';
 import { useFOMOStore } from '@/store/fomoStore';
 import { useTheme } from '@/components/ui/ThemeProvider';
+import { useRef, useState, useCallback, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 export function Hero() {
   const countdownTarget = useFOMOStore((s) => s.countdownTarget);
   const { theme } = useTheme();
   const isLight = theme === 'light';
+
+  // Scroll progress for B2x badges row on mobile
+  const badgesRef = useRef<HTMLDivElement>(null);
+  const [badgeScroll, setBadgeScroll] = useState(0);
+
+  const handleBadgeScroll = useCallback(() => {
+    const el = badgesRef.current;
+    if (!el) return;
+    const max = el.scrollWidth - el.clientWidth;
+    setBadgeScroll(max > 0 ? el.scrollLeft / max : 0);
+  }, []);
+
+  useEffect(() => {
+    const el = badgesRef.current;
+    if (!el) return;
+    el.addEventListener('scroll', handleBadgeScroll, { passive: true });
+    handleBadgeScroll();
+    return () => el.removeEventListener('scroll', handleBadgeScroll);
+  }, [handleBadgeScroll]);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="Hero section">
@@ -16,7 +37,7 @@ export function Hero() {
         style={{ backgroundImage: "url('/assets/images/Home Hero section.jpeg')" }} aria-hidden="true" />
       <div className={`absolute inset-0 ${
         isLight
-          ? 'bg-gradient-to-br from-white/85 via-purple-50/80 to-red-50/70'
+          ? 'bg-gradient-to-br from-white/95 via-purple-50/92 to-red-50/88'
           : 'bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-slate-950/80'
       }`} aria-hidden="true" />
 
@@ -49,8 +70,8 @@ export function Hero() {
           <span className={isLight
             ? 'bg-gradient-to-r from-[#6B21A8] to-[#DC2626] bg-clip-text text-transparent'
             : 'bg-gradient-to-r from-violet-400 to-purple-300 bg-clip-text text-transparent'
-          }>Computer</span>
-          <br />&amp; Gadgets
+          }>Gadget</span>
+          <br />Store
         </h1>
         <p className={`text-xs sm:text-sm font-semibold mb-3 tracking-wide ${
           isLight ? 'text-[#DC2626]' : 'text-red-400/80'
@@ -60,7 +81,7 @@ export function Hero() {
         <p className={`text-base sm:text-lg max-w-2xl mx-auto mb-6 leading-relaxed px-2 ${
           isLight ? 'text-[#4a2080]/80' : 'text-white/70'
         }`}>
-          Laptops · Phones · Luxury Cars · Expert Tech Services — retail &amp; wholesale.
+          Laptops · Phones · Bags · Expert Tech Services — retail &amp; wholesale.
           Serving individuals, businesses, government agencies, and NGOs across Nigeria.
         </p>
 
@@ -85,16 +106,68 @@ export function Hero() {
         </div>
 
         {/* Client type badges — scroll horizontally on mobile */}
-        <div className="flex gap-2 justify-start sm:justify-center overflow-x-auto pb-1 px-2 sm:px-0 scrollbar-hide">
-          {[
-            { label: 'B2C Retail', cls: 'text-sky-300 border-sky-500/30 bg-sky-500/10' },
-            { label: 'B2B Wholesale', cls: 'text-amber-300 border-amber-500/30 bg-amber-500/10' },
-            { label: 'B2G Government', cls: 'text-red-300 border-red-500/30 bg-red-500/10' },
-            { label: 'B2NGO Non-Profit', cls: 'text-green-300 border-green-500/30 bg-green-500/10' },
-            { label: 'Luxury Cars', cls: 'text-purple-300 border-purple-500/30 bg-purple-500/10' },
-          ].map(({ label, cls }) => (
-            <span key={label} className={`flex-shrink-0 text-xs font-semibold px-3 py-1 rounded-full border backdrop-blur-sm ${cls}`}>{label}</span>
-          ))}
+        <div className="sm:hidden">
+          <div
+            ref={badgesRef}
+            onScroll={handleBadgeScroll}
+            className="flex gap-2 overflow-x-auto pb-1 px-2 scrollbar-hide"
+            style={{ WebkitOverflowScrolling: 'touch' }}
+          >
+            {isLight ? (
+              <>
+                <span className="flex-shrink-0 text-xs font-bold px-3 py-1 rounded-full border bg-sky-100 border-sky-400 text-sky-800">B2C Retail</span>
+                <span className="flex-shrink-0 text-xs font-bold px-3 py-1 rounded-full border bg-amber-100 border-amber-500 text-amber-800">B2B Wholesale</span>
+                <span className="flex-shrink-0 text-xs font-bold px-3 py-1 rounded-full border bg-red-100 border-red-400 text-red-800">B2G Government</span>
+                <span className="flex-shrink-0 text-xs font-bold px-3 py-1 rounded-full border bg-green-100 border-green-500 text-green-800">B2NGO Non-Profit</span>
+                <span className="flex-shrink-0 text-xs font-bold px-3 py-1 rounded-full border bg-purple-100 border-purple-400 text-purple-800">Bags &amp; Accessories</span>
+              </>
+            ) : (
+              <>
+                {[
+                  { label: 'B2C Retail', cls: 'text-sky-300 border-sky-500/30 bg-sky-500/10' },
+                  { label: 'B2B Wholesale', cls: 'text-amber-300 border-amber-500/30 bg-amber-500/10' },
+                  { label: 'B2G Government', cls: 'text-red-300 border-red-500/30 bg-red-500/10' },
+                  { label: 'B2NGO Non-Profit', cls: 'text-green-300 border-green-500/30 bg-green-500/10' },
+                  { label: 'Bags & Accessories', cls: 'text-purple-300 border-purple-500/30 bg-purple-500/10' },
+                ].map(({ label, cls }) => (
+                  <span key={label} className={`flex-shrink-0 text-xs font-semibold px-3 py-1 rounded-full border backdrop-blur-sm ${cls}`}>{label}</span>
+                ))}
+              </>
+            )}
+          </div>
+          {/* Scroll progress bar — mobile only */}
+          <div className="mx-2 mt-1.5 h-[3px] rounded-full bg-white/10 overflow-hidden">
+            <motion.div
+              className="h-full rounded-full bg-gradient-to-r from-sky-400 to-violet-500"
+              style={{ width: `${badgeScroll * 100}%` }}
+              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+            />
+          </div>
+        </div>
+
+        {/* Desktop badges — centered, no scroll bar needed */}
+        <div className="hidden sm:flex gap-2 justify-center flex-wrap px-0">
+          {isLight ? (
+            <>
+              <span className="flex-shrink-0 text-xs font-bold px-3 py-1 rounded-full border bg-sky-100 border-sky-400 text-sky-800">B2C Retail</span>
+              <span className="flex-shrink-0 text-xs font-bold px-3 py-1 rounded-full border bg-amber-100 border-amber-500 text-amber-800">B2B Wholesale</span>
+              <span className="flex-shrink-0 text-xs font-bold px-3 py-1 rounded-full border bg-red-100 border-red-400 text-red-800">B2G Government</span>
+              <span className="flex-shrink-0 text-xs font-bold px-3 py-1 rounded-full border bg-green-100 border-green-500 text-green-800">B2NGO Non-Profit</span>
+              <span className="flex-shrink-0 text-xs font-bold px-3 py-1 rounded-full border bg-purple-100 border-purple-400 text-purple-800">Bags &amp; Accessories</span>
+            </>
+          ) : (
+            <>
+              {[
+                { label: 'B2C Retail', cls: 'text-sky-300 border-sky-500/30 bg-sky-500/10' },
+                { label: 'B2B Wholesale', cls: 'text-amber-300 border-amber-500/30 bg-amber-500/10' },
+                { label: 'B2G Government', cls: 'text-red-300 border-red-500/30 bg-red-500/10' },
+                { label: 'B2NGO Non-Profit', cls: 'text-green-300 border-green-500/30 bg-green-500/10' },
+                { label: 'Bags & Accessories', cls: 'text-purple-300 border-purple-500/30 bg-purple-500/10' },
+              ].map(({ label, cls }) => (
+                <span key={label} className={`flex-shrink-0 text-xs font-semibold px-3 py-1 rounded-full border backdrop-blur-sm ${cls}`}>{label}</span>
+              ))}
+            </>
+          )}
         </div>
       </div>
 

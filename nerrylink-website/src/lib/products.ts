@@ -1,7 +1,7 @@
 export interface Product {
   id: string;
   name: string;
-  category: 'pcs-laptops' | 'mobile' | 'gadgets' | 'automotive';
+  category: 'pcs-laptops' | 'mobile' | 'gadgets' | 'bags';
   description: string;
   imagePath: string;
   isRefurbished: boolean;
@@ -189,58 +189,58 @@ export const products: Product[] = [
     clientTypes: ['B2C', 'B2B', 'B2G'],
     whatsappInquiryText: 'I am interested in networking equipment. Please share available options.' },
 
-  // ── Automotive ─────────────────────────────────────────────────
-  { id: 'honda-crv', name: 'Luxury Rental Rides', category: 'automotive',
-    description: 'Premium SUV hire for events, executive travel, and corporate functions. Comfortable, spacious, and reliable.',
-    imagePath: 'https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&q=80',
-    isRefurbished: false, clientTypes: ['B2C', 'B2B', 'B2G'],
-    whatsappInquiryText: 'I am interested in Luxury Rental Rides. Please share availability and pricing.' },
-
-  { id: 'toyota-prado', name: 'Executive Rentals', category: 'automotive',
-    description: 'Executive-class vehicles for government delegations, VIP transport, and high-profile corporate events.',
-    imagePath: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80',
-    isRefurbished: false, clientTypes: ['B2C', 'B2B', 'B2G'],
-    whatsappInquiryText: 'I am interested in Executive Rentals. Please share available vehicles and pricing.' },
-
-  { id: 'toyota-hilux', name: 'Long Distance Journey Rentals', category: 'automotive',
-    description: 'Rugged, dependable vehicles built for long-distance travel across Nigerian roads. Safe and comfortable.',
-    imagePath: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
-    isRefurbished: false, clientTypes: ['B2C', 'B2B', 'B2G'],
-    whatsappInquiryText: 'I am interested in Long Distance Journey Rentals. Please share rates and availability.' },
-
-  { id: 'toyota-camry', name: 'Fancy Drive Arounds', category: 'automotive',
-    description: 'Stylish, smooth rides for city cruising, special occasions, weddings, and social events.',
-    imagePath: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&q=80',
+  // ── Bags ───────────────────────────────────────────────────────
+  { id: 'laptop-bag-premium', name: 'Premium Laptop Bags', category: 'bags',
+    description: 'High-quality laptop bags with padded compartments, water-resistant fabric, and multiple pockets. Fits 13"–17" laptops. Perfect for professionals and students.',
+    imagePath: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&q=80',
     isRefurbished: false, clientTypes: ['B2C', 'B2B'],
-    whatsappInquiryText: 'I am interested in Fancy Drive Arounds. Please share available options and pricing.' },
+    whatsappInquiryText: 'I am interested in Premium Laptop Bags. Please share available sizes and pricing.' },
 
-  { id: 'lexus-rx', name: 'Premium Car Sales', category: 'automotive',
-    description: 'Top-of-the-range vehicles available for outright purchase. Quality assured, competitively priced.',
-    imagePath: 'https://images.unsplash.com/photo-1617469767053-d3b523a0b982?w=600&q=80',
+  { id: 'laptop-backpack', name: 'Laptop Backpacks', category: 'bags',
+    description: 'Ergonomic laptop backpacks with USB charging port, anti-theft design, and spacious compartments. Ideal for daily commuters and travellers.',
+    imagePath: 'https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?w=600&q=80',
+    isRefurbished: false, clientTypes: ['B2C', 'B2B'],
+    whatsappInquiryText: 'I am interested in Laptop Backpacks. Please share available styles and pricing.' },
+
+  { id: 'laptop-sleeve', name: 'Laptop Sleeves & Cases', category: 'bags',
+    description: 'Slim, lightweight laptop sleeves and hard-shell cases for maximum protection. Available for MacBook, Dell, HP, Lenovo, and more.',
+    imagePath: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=600&q=80',
+    isRefurbished: false, clientTypes: ['B2C', 'B2B'],
+    whatsappInquiryText: 'I am interested in Laptop Sleeves and Cases. Please share available sizes and brands.' },
+
+  { id: 'leather-work-bag', name: 'Leather Work Bags', category: 'bags',
+    description: 'Premium genuine leather work bags — hand-crafted with reinforced stitching, padded laptop sleeve, and elegant finish. Carries your laptop and work tools in style.',
+    imagePath: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=600&q=80',
+    isRefurbished: false, clientTypes: ['B2C', 'B2B'],
+    whatsappInquiryText: 'I am interested in Leather Work Bags. Please share available styles and pricing.' },
+
+  { id: 'handbag-portable', name: 'Portable Handbags', category: 'bags',
+    description: 'Stylish and functional portable handbags — perfect for carrying tablets, documents, and everyday essentials. Available in multiple colours and designs.',
+    imagePath: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80',
+    isRefurbished: false, clientTypes: ['B2C', 'B2B'],
+    whatsappInquiryText: 'I am interested in Portable Handbags. Please share available styles and pricing.' },
+
+  { id: 'skin-tote-bag', name: 'Skin Tote & Carry Bags', category: 'bags',
+    description: 'Hand-crafted skin and faux-leather tote bags — spacious enough for a 15" laptop, documents, and daily essentials. Sleek, durable, and professional.',
+    imagePath: 'https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=600&q=80',
+    isRefurbished: false, clientTypes: ['B2C', 'B2B'],
+    whatsappInquiryText: 'I am interested in Skin Tote and Carry Bags. Please share available options and pricing.' },
+
+  { id: 'office-bag', name: 'Executive Office Bags', category: 'bags',
+    description: 'Professional executive bags with dedicated laptop compartment, document organiser, and premium finish. Ideal for business meetings and corporate settings.',
+    imagePath: 'https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80',
     isRefurbished: false, clientTypes: ['B2C', 'B2B', 'B2G'],
-    whatsappInquiryText: 'I am interested in purchasing a premium vehicle. Please share available options and pricing.' },
+    whatsappInquiryText: 'I am interested in Executive Office Bags. Please share available options and pricing.' },
 
-  { id: 'mercedes-gle', name: 'Corporate Fleet Supply', category: 'automotive',
-    description: 'Bulk vehicle supply for corporate fleets, government convoys, and institutional transport needs.',
-    imagePath: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&q=80',
-    isRefurbished: false, clientTypes: ['B2B', 'B2G'],
-    whatsappInquiryText: 'I am interested in Corporate Fleet Supply. Please share available vehicles and bulk pricing.' },
-
-  { id: 'toyota-corolla', name: 'Standard Car Sales', category: 'automotive',
-    description: 'Affordable, reliable vehicles for personal and commercial use. Great value for everyday driving.',
-    imagePath: 'https://images.unsplash.com/photo-1590362891991-f776e747a588?w=600&q=80',
+  { id: 'travel-bag', name: 'Travel & Duffel Bags', category: 'bags',
+    description: 'Durable travel and duffel bags with expandable capacity, lockable zippers, and carry handles. Great for business trips and weekend getaways.',
+    imagePath: 'https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=600&q=80',
     isRefurbished: false, clientTypes: ['B2C', 'B2B'],
-    whatsappInquiryText: 'I am interested in Standard Car Sales. Please share available options and pricing.' },
+    whatsappInquiryText: 'I am interested in Travel and Duffel Bags. Please share available options and pricing.' },
 
-  { id: 'luxury-rental', name: 'Refurbished Cars for Sale', category: 'automotive',
-    description: 'Quality-inspected, refurbished vehicles at budget-friendly prices. Tested and certified before sale.',
-    imagePath: 'https://images.unsplash.com/photo-1563720223185-11003d516935?w=600&q=80',
-    isRefurbished: true, clientTypes: ['B2C', 'B2B'],
-    whatsappInquiryText: 'I am interested in Refurbished Cars for Sale. Please share available options and pricing.' },
-
-  { id: 'standard-rental', name: 'Everyday Car Rentals', category: 'automotive',
-    description: 'Flexible daily, weekly, or monthly car hire for individuals and small businesses. Simple and affordable.',
-    imagePath: 'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=600&q=80',
-    isRefurbished: false, clientTypes: ['B2C', 'B2B'],
-    whatsappInquiryText: 'I am interested in Everyday Car Rentals. Please share rates and availability.' },
+  { id: 'bags-wholesale', name: 'Bags Wholesale (Bulk)', category: 'bags',
+    description: 'Bulk bag supply for resellers, schools, corporate gifting, and NGO distributions. All types available — laptop bags, backpacks, handbags, and more. Competitive wholesale pricing.',
+    imagePath: 'https://images.unsplash.com/photo-1473188588951-666fce8e7c68?w=600&q=80',
+    isRefurbished: false, isWholesale: true, clientTypes: ['B2B', 'B2G', 'B2NGO'],
+    whatsappInquiryText: 'I am interested in bulk bag supply. Please share available types, quantities, and wholesale pricing.' },
 ];

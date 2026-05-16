@@ -32,7 +32,7 @@ export function Footer() {
             }`}>
               NerryLink
             </span>
-            <p className={`mt-2 text-sm ${textMuted}`}>Computer and Gadgets</p>
+            <p className={`mt-2 text-sm ${textMuted}`}>Gadget Store</p>
             <p className={`mt-1 text-xs ${textFaint}`}>CAC: NerryLink&apos;s Global Services</p>
             <div className="flex flex-wrap gap-1 mt-3">
               {['B2C', 'B2B', 'B2G', 'B2NGO'].map((t) => (
@@ -55,7 +55,7 @@ export function Footer() {
                 {WA_ICON}
                 <span>+234 814 958 8574 <span className="text-orange-500/70 text-xs font-normal">(Slower response)</span></span>
               </a>
-              <a href="https://www.facebook.com/profile.php?id=61580632770804" target="_blank" rel="noopener noreferrer"
+              <a href="https://web.facebook.com/profile.php?id=100067730592515" target="_blank" rel="noopener noreferrer"
                 className={`flex items-center gap-2 transition-colors text-sm ${isLight ? 'text-[#6B21A8] hover:text-[#7C3AED]' : 'text-sky-400 hover:text-sky-300'}`}>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
@@ -92,7 +92,7 @@ export function Footer() {
               ))}
             </ul>
           </nav>
-          <p className={`text-xs ${textFaint}`}>&copy; {new Date().getFullYear()} NerryLink Computer and Gadgets. All rights reserved.</p>
+          <p className={`text-xs ${textFaint}`}>&copy; {new Date().getFullYear()} NerryLink Gadget Store. All rights reserved.</p>
         </div>
       </div>
     </footer>

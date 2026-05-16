@@ -1,5 +1,6 @@
 'use client';
 import Link from 'next/link';
+import { useTheme } from '@/components/ui/ThemeProvider';
 
 interface GlassButtonProps {
   children: React.ReactNode;
@@ -12,10 +13,18 @@ interface GlassButtonProps {
   'aria-label'?: string;
 }
 
-const variantStyles: Record<string, string> = {
-  primary: 'bg-sky-500/20 border-sky-400/40 text-sky-100 hover:bg-sky-500/40',
-  secondary: 'bg-white/10 border-white/20 text-white hover:bg-white/20',
+// Dark mode styles (glass/translucent)
+const darkStyles: Record<string, string> = {
+  primary:  'bg-sky-500/20 border-sky-400/40 text-sky-100 hover:bg-sky-500/40',
+  secondary:'bg-white/10 border-white/20 text-white hover:bg-white/20',
   whatsapp: 'bg-[#25D366]/20 border-[#25D366]/40 text-[#25D366] hover:bg-[#25D366]/40',
+};
+
+// Light mode styles (solid, high contrast)
+const lightStyles: Record<string, string> = {
+  primary:  'bg-[#6B21A8] border-[#6B21A8] text-white hover:bg-[#7C3AED] hover:border-[#7C3AED] shadow-md shadow-purple-300/40',
+  secondary:'bg-white border-[#6B21A8]/40 text-[#6B21A8] hover:bg-purple-50 shadow-sm',
+  whatsapp: 'bg-[#25D366] border-[#25D366] text-white hover:bg-[#1ebe5d] shadow-md shadow-green-300/40',
 };
 
 export function GlassButton({
@@ -28,7 +37,11 @@ export function GlassButton({
   className = '',
   'aria-label': ariaLabel,
 }: GlassButtonProps) {
-  const base = `inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl border backdrop-blur-md font-semibold text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] ${variantStyles[variant]} ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'} ${className}`;
+  const { theme } = useTheme();
+  const isLight = theme === 'light';
+  const variantStyle = isLight ? lightStyles[variant] : darkStyles[variant];
+
+  const base = `inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl border backdrop-blur-md font-semibold text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] ${variantStyle} ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'} ${className}`;
 
   if (href) {
     return (
