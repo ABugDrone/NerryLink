@@ -30,10 +30,10 @@ export function Footer() {
               ? 'bg-gradient-to-r from-[#6B21A8] to-[#DC2626] bg-clip-text text-transparent'
               : 'bg-gradient-to-r from-violet-400 to-purple-300 bg-clip-text text-transparent'
             }`}>
-              NerryLink
+              Nerrylink's
             </span>
-            <p className={`mt-2 text-sm ${textMuted}`}>Gadget Store</p>
-            <p className={`mt-1 text-xs ${textFaint}`}>CAC: NerryLink&apos;s Global Services</p>
+            <p className={`mt-2 text-sm ${textMuted}`}>Gadgets Store</p>
+            <p className={`mt-1 text-xs ${textFaint}`}>CAC: Nerrylink's Global Services</p>
             <div className="flex flex-wrap gap-1 mt-3">
               {['B2C', 'B2B', 'B2G', 'B2NGO'].map((t) => (
                 <span key={t} className={`text-[10px] font-bold px-1.5 py-0.5 rounded border ${badge}`}>{t}</span>
@@ -92,7 +92,7 @@ export function Footer() {
               ))}
             </ul>
           </nav>
-          <p className={`text-xs ${textFaint}`}>&copy; {new Date().getFullYear()} NerryLink Gadget Store. All rights reserved.</p>
+          <p className={`text-xs ${textFaint}`}>&copy; {new Date().getFullYear()} Nerrylink's Gadgets Store. All rights reserved.</p>
         </div>
       </div>
     </footer>

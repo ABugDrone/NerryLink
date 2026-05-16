@@ -6,19 +6,19 @@ import { WhatsAppIntegration } from '@/components/forms/WhatsAppIntegration';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
 
 export const metadata: Metadata = {
-  title: 'NerryLink Gadget Store — Nigeria\'s Trusted Tech Store',
-  description: 'Shop laptops, phones, bags and book expert tech services at NerryLink Gadget Store, Nigeria.',
+  title: 'Nerrylink\'s Gadgets Store — Nigeria\'s Trusted Tech Store',
+  description: 'Shop laptops, phones, bags and book expert tech services at Nerrylink\'s Gadgets Store, Nigeria.',
   icons: {
     icon: '/favicon.svg',
     shortcut: '/favicon.svg',
     apple: '/logo.svg',
   },
   openGraph: {
-    title: 'NerryLink Gadget Store',
+    title: 'Nerrylink\'s Gadgets Store',
     description: 'Laptops, Phones, Bags & Expert Tech Services in Nigeria.',
     url: 'https://nerrylinks.web.app',
-    siteName: 'NerryLink Gadget Store',
-    images: [{ url: '/assets/images/Home Hero section.jpeg', width: 1200, height: 630, alt: 'NerryLink Gadget Store' }],
+    siteName: 'Nerrylink\'s Gadgets Store',
+    images: [{ url: '/assets/images/Home Hero section.jpeg', width: 1200, height: 630, alt: 'Nerrylink\'s Gadgets Store' }],
     type: 'website',
   },
 };
