@@ -243,4 +243,41 @@ export const products: Product[] = [
     imagePath: 'https://images.unsplash.com/photo-1473188588951-666fce8e7c68?w=600&q=80',
     isRefurbished: false, isWholesale: true, clientTypes: ['B2B', 'B2G', 'B2NGO'],
     whatsappInquiryText: 'I am interested in bulk bag supply. Please share available types, quantities, and wholesale pricing.' },
+
+  // ── Premium Bag Catalogue (6 new products) ──────────────────────
+  { id: 'bag-premium-1', name: 'Premium Bags', category: 'bags',
+    description: 'High-quality premium bags with superior craftsmanship and durable materials. Perfect for professionals and everyday use.',
+    imagePath: 'https://images.unsplash.com/photo-1622560481156-01fc7e1693e6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bGFwdG9wJTIwYmFnc3xlbnwwfHwwfHx8MA%3D%3D',
+    isRefurbished: false, clientTypes: ['B2C', 'B2B'],
+    whatsappInquiryText: 'I am interested in Premium Bags. Please share available options and pricing.' },
+
+  { id: 'bag-premium-2', name: 'Quality Bags', category: 'bags',
+    description: 'Quality-crafted bags with excellent durability and functional design. Ideal for work, travel, and daily commute.',
+    imagePath: 'https://images.unsplash.com/photo-1554412664-6e7b242f969d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8bGFwdG9wJTIwYmFnc3xlbnwwfHwwfHx8MA%3D%3D',
+    isRefurbished: false, clientTypes: ['B2C', 'B2B'],
+    whatsappInquiryText: 'I am interested in Quality Bags. Please share available options and pricing.' },
+
+  { id: 'bag-premium-3', name: 'Professional Bags', category: 'bags',
+    description: 'Professional-grade bags designed for business and corporate environments. Sleek, functional, and stylish.',
+    imagePath: 'https://images.unsplash.com/photo-1611461527944-1a718332613b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxhcHRvcCUyMGJhZ3N8ZW58MHx8MHx8fDA%3D',
+    isRefurbished: false, clientTypes: ['B2C', 'B2B'],
+    whatsappInquiryText: 'I am interested in Professional Bags. Please share available options and pricing.' },
+
+  { id: 'bag-premium-4', name: 'Durable Bags', category: 'bags',
+    description: 'Durable and reliable bags built to last. Perfect for heavy-duty use and frequent travel.',
+    imagePath: 'https://images.unsplash.com/photo-1608731267464-c0c889c2ff92?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    isRefurbished: false, clientTypes: ['B2C', 'B2B'],
+    whatsappInquiryText: 'I am interested in Durable Bags. Please share available options and pricing.' },
+
+  { id: 'bag-premium-5', name: 'Stylish Bags', category: 'bags',
+    description: 'Stylish and contemporary bags that combine fashion with functionality. Great for modern professionals.',
+    imagePath: 'https://images.unsplash.com/photo-1643033998438-38b4211fa2d5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGFwdG9wJTIwYmFnc3xlbnwwfHwwfHx8MA%3D%3D',
+    isRefurbished: false, clientTypes: ['B2C', 'B2B'],
+    whatsappInquiryText: 'I am interested in Stylish Bags. Please share available options and pricing.' },
+
+  { id: 'bag-premium-6', name: 'Essential Bags', category: 'bags',
+    description: 'Essential everyday bags with practical compartments and comfortable carry. Versatile for any occasion.',
+    imagePath: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwYmFnc3xlbnwwfHwwfHx8MA%3D%3D',
+    isRefurbished: false, clientTypes: ['B2C', 'B2B'],
+    whatsappInquiryText: 'I am interested in Essential Bags. Please share available options and pricing.' },
 ];
