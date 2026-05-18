@@ -76,7 +76,7 @@ export function Hero() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center py-24 sm:py-0"
+        className="relative z-10 w-full max-w-4xl mx-auto px-4 sm:px-6 text-center py-24"
       >
         <motion.span variants={itemVariants} className={`inline-block glass px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-5 ${
           isLight ? 'text-[#6B21A8]' : 'text-violet-300'
