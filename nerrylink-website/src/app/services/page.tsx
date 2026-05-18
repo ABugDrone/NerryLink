@@ -12,7 +12,10 @@ export default function ServicesPage() {
     <div>
       <section className="relative h-72 sm:h-96 flex items-end overflow-hidden">
         <Image src="/assets/images/Tech Services 2.jpeg" alt="NerryLink Tech Services" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/35" />
+        {/* Dark mode overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-slate-950/35 dark:block hidden" />
+        {/* Light mode overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/85 to-white/50 dark:hidden block" />
         <div className="relative z-10 px-6 pb-10 max-w-7xl mx-auto w-full animate-fade-up">
           <span className="inline-block glass px-4 py-1.5 rounded-full text-xs font-semibold text-emerald-300 uppercase tracking-widest mb-3">Services</span>
           <h1 className="text-3xl sm:text-5xl font-black text-white">Expert Tech Services</h1>
