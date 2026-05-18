@@ -98,19 +98,31 @@ export function Hero() {
               fill="none" 
               stroke="currentColor" 
               strokeWidth="1.5"
-              className="text-sky-400 animate-float mt-1 flex-shrink-0"
+              className="text-sky-400 animate-star-converge-1 mt-1 flex-shrink-0"
               aria-hidden="true"
             >
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
             </svg>
-            <span className="animate-glitch-text">NerryLink&apos;s</span>
+            <span className="animate-slide-from-left inline-block">NerryLink&apos;s</span>
           </span>{' '}
-          <span className={`animate-glitch-text ${isLight
+          <span className={`animate-slide-from-right inline-block ${isLight
             ? 'bg-gradient-to-r from-[#6B21A8] to-[#DC2626] bg-clip-text text-transparent'
             : 'bg-gradient-to-r from-violet-400 via-purple-300 to-pink-400 bg-clip-text text-transparent'
           }`}>Gadget</span>
+          <svg 
+            width="28" 
+            height="28" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="1.5"
+            className="text-violet-400 animate-star-converge-2 inline-block ml-2 mb-1"
+            aria-hidden="true"
+          >
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
           <br />
-          <span className="animate-glitch-text">Store</span>
+          <span className="animate-slide-from-bottom inline-block">Store</span>
         </motion.h1>
 
         <motion.p variants={itemVariants} className={`text-xs sm:text-sm font-bold mb-4 tracking-wide flex items-center justify-center gap-2 ${
