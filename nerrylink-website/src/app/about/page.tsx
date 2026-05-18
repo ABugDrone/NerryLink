@@ -12,7 +12,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative h-72 sm:h-96 flex items-end overflow-hidden">
         <Image src="/assets/images/About US.jpeg" alt="About NerryLink" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-950/40" />
         <div className="relative z-10 px-6 pb-10 max-w-5xl mx-auto w-full animate-fade-up">
           <span className="inline-block glass px-4 py-1.5 rounded-full text-xs font-semibold text-sky-300 uppercase tracking-widest mb-3">About Us</span>
           <h1 className="text-3xl sm:text-5xl font-black text-white">Nerrylink's Gadget Store</h1>
@@ -29,7 +29,7 @@ export default function AboutPage() {
           <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
             <source src="/assets/images/Instore.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 to-transparent flex items-center px-8">
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 to-slate-950/50 flex items-center px-8">
             <div>
               <p className="text-sky-300 text-xs font-semibold uppercase tracking-widest mb-1">Experience</p>
               <p className="text-white text-xl font-bold">Visit Us In-Store</p>
