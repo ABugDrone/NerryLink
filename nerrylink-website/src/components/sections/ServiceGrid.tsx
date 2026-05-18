@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { GlassButton } from '@/components/ui/GlassButton';
 import { GlassModal } from '@/components/ui/GlassModal';
@@ -20,9 +21,9 @@ const iconMap: Record<string, React.ReactNode> = {
 };
 
 const categoryConfig = {
-  technical: { label: 'Technical Services', color: 'sky', badge: 'bg-sky-500/20 text-sky-300 border-sky-500/30' },
-  support: { label: 'Support Services', color: 'emerald', badge: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' },
-  wholesale: { label: 'Wholesale & Enterprise', color: 'purple', badge: 'bg-purple-500/20 text-purple-300 border-purple-500/30' },
+  technical: { label: 'Technical Services', color: 'sky', badge: 'bg-sky-500/20 text-sky-300 border-sky-500/30', hoverBorder: 'hover:border-sky-400/50', glow: 'hover:shadow-sky-500/10' },
+  support: { label: 'Support Services', color: 'emerald', badge: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30', hoverBorder: 'hover:border-emerald-400/50', glow: 'hover:shadow-emerald-500/10' },
+  wholesale: { label: 'Wholesale & Enterprise', color: 'purple', badge: 'bg-purple-500/20 text-purple-300 border-purple-500/30', hoverBorder: 'hover:border-purple-400/50', glow: 'hover:shadow-purple-500/10' },
 };
 
 const clientTypeBadge: Record<string, string> = {
@@ -46,7 +47,8 @@ export function ServiceGrid() {
       <div className="text-center mb-12">
         <span className="glass px-4 py-1.5 rounded-full text-xs font-semibold text-emerald-300 uppercase tracking-widest">Services</span>
         <h2 id="services-heading" className="mt-4 text-3xl sm:text-4xl font-black text-white">Expert Tech Services</h2>
-        <p className="mt-2 text-white/60 max-w-xl mx-auto">
+        <span className="section-accent-line" aria-hidden="true" />
+        <p className="mt-4 text-white/60 max-w-xl mx-auto">
           From individual repairs to government-scale procurement — we serve everyone.
         </p>
 
@@ -81,14 +83,20 @@ export function ServiceGrid() {
                 </span>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {items.map((service, i) => (
-                  <div key={service.id} className="animate-fade-up">
+                  {items.map((service, i) => (
+                  <motion.div
+                    key={service.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-30px' }}
+                    transition={{ delay: i * 0.06, duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                  >
                     <GlassCard
-                      className="flex flex-col gap-3 p-5 cursor-pointer hover:border-sky-400/40 hover:-translate-y-0.5 transition-all duration-200 h-full"
+                      className={`flex flex-col gap-3 p-5 cursor-pointer ${categoryConfig[cat].hoverBorder} hover:-translate-y-1 hover:shadow-xl ${categoryConfig[cat].glow} transition-all duration-250 h-full`}
                       onClick={() => setSelectedService(service)}
                     >
                       <div className="flex items-start gap-3">
-                        <div className={`flex-shrink-0 w-10 h-10 rounded-xl bg-${color}-500/20 flex items-center justify-center text-${color}-300`}>
+                        <div className={`flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-${color}-500/25 to-${color}-600/10 border border-${color}-500/20 flex items-center justify-center text-${color}-300 shadow-inner`}>
                           {iconMap[service.iconName]}
                         </div>
                         <div className="flex-1 min-w-0">
@@ -103,7 +111,7 @@ export function ServiceGrid() {
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-white/30" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
                       </div>
                     </GlassCard>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -132,7 +140,7 @@ export function ServiceGrid() {
               variant="whatsapp"
               className="w-full justify-center"
               onClick={() => {
-                const url = buildWhatsAppURL('2348166490440', `Hello NerryLinks! ${selectedService.whatsappBookingText}`);
+                const url = buildWhatsAppURL('2348166490440', `Hello Nerrylink's! ${selectedService.whatsappBookingText}`);
                 window.open(url, '_blank', 'noopener,noreferrer');
               }}
             >

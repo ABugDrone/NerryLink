@@ -1,5 +1,11 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { TeamSection } from '@/components/sections/TeamSection';
+
+export const metadata: Metadata = {
+  title: "Our Team — Nerrylink's Gadget Store",
+  description: "Meet the passionate and certified team behind Nerrylink's Gadget Store — dedicated to delivering the best tech products and services in Nigeria.",
+};
 
 export default function TeamPage() {
   return (

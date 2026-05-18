@@ -1,5 +1,11 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { ContactSection } from '@/components/sections/ContactSection';
+
+export const metadata: Metadata = {
+  title: "Contact & Book a Service — Nerrylink's Gadget Store",
+  description: "Book a service or make an enquiry at Nerrylink's Gadget Store. We respond via WhatsApp — Mon–Sat, 9 AM – 7:30 PM.",
+};
 
 export default function ContactPage() {
   return (

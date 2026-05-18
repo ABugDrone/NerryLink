@@ -110,7 +110,8 @@ export function PartnersSection() {
         >
           Trusted by Great Organisations
         </h2>
-        <p className="mt-2 text-[var(--text-secondary)] text-sm max-w-lg mx-auto">
+        <span className="section-accent-line" aria-hidden="true" />
+        <p className="mt-4 text-[var(--text-secondary)] text-sm max-w-lg mx-auto">
           We collaborate with leading businesses across Nigeria to deliver the best tech experience.
         </p>
       </div>

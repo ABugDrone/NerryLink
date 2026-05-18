@@ -41,7 +41,12 @@ export function GlassButton({
   const isLight = theme === 'light';
   const variantStyle = isLight ? lightStyles[variant] : darkStyles[variant];
 
-  const base = `inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl border backdrop-blur-md font-semibold text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] ${variantStyle} ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'} ${className}`;
+  const focusRing =
+    variant === 'whatsapp'
+      ? 'focus-visible:ring-[#25D366]'
+      : 'focus-visible:ring-[#7C3AED]';
+
+  const base = `inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl border backdrop-blur-md font-semibold text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 ${focusRing} ${variantStyle} ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'} ${className}`;
 
   if (href) {
     return (

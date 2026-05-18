@@ -490,6 +490,71 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 }
 
 /* ===================================================
+   GRADIENT TEXT UTILITY
+   =================================================== */
+.brand-gradient-text {
+  background: linear-gradient(135deg, #7C3AED, #DC2626);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.brand-gradient-text-violet {
+  background: linear-gradient(135deg, #a78bfa, #c4b5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===================================================
+   SHIMMER ANIMATION
+   =================================================== */
+@keyframes shimmerMove {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.shimmer-text {
+  background: linear-gradient(90deg, #a78bfa 0%, #f0abfc 40%, #a78bfa 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmerMove 3s linear infinite;
+}
+
+/* ===================================================
+   GLOW PULSE ANIMATION
+   =================================================== */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(124,58,237,0.2); }
+  50%       { box-shadow: 0 0 28px rgba(124,58,237,0.5); }
+}
+.animate-glow-pulse {
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+/* ===================================================
+   SECTION ACCENT LINE
+   =================================================== */
+.section-accent-line {
+  display: block;
+  width: 48px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #7C3AED, #DC2626);
+  margin: 12px auto 0;
+}
+
+/* ===================================================
+   STATS CARD
+   =================================================== */
+.stat-number {
+  font-family: 'Montserrat', 'Arial Black', Arial, sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+/* ===================================================
    CATEGORY TABS — mobile scroll
    =================================================== */
 @media (max-width: 639px) {
@@ -498,4 +563,118 @@ h3.font-bold, h3.font-semibold, h3.font-black {
     /* Allow content to scroll past the container edge */
     scroll-padding-right: 1rem;
   }
+}
+
+/* ===================================================
+   GLOW UTILITIES
+   =================================================== */
+.glow {
+  box-shadow: 0 0 20px rgba(124,58,237,0.3), 0 0 40px rgba(124,58,237,0.15);
+}
+.glow-sm {
+  box-shadow: 0 0 12px rgba(124,58,237,0.25);
+}
+.glow-lg {
+  box-shadow: 0 0 32px rgba(124,58,237,0.4), 0 0 64px rgba(124,58,237,0.2);
+}
+.glow-red {
+  box-shadow: 0 0 20px rgba(220,38,38,0.3), 0 0 40px rgba(220,38,38,0.15);
+}
+.glow-emerald {
+  box-shadow: 0 0 20px rgba(5,150,105,0.3), 0 0 40px rgba(5,150,105,0.15);
+}
+
+/* ===================================================
+   GRADIENT BORDER UTILITIES
+   =================================================== */
+.gradient-border {
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(220,38,38,0.1)) border-box;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(135deg, #7C3AED, #DC2626);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.gradient-border-sm {
+  border-radius: 12px;
+}
+.gradient-border-lg {
+  border-radius: 20px;
+}
+
+/* ===================================================
+   SHIMMER UTILITIES
+   =================================================== */
+.shimmer {
+  background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0.1) 100%);
+  background-size: 200% 100%;
+  animation: shimmerMove 2s infinite;
+}
+.shimmer-slow {
+  animation: shimmerMove 3s infinite;
+}
+.shimmer-fast {
+  animation: shimmerMove 1.5s infinite;
+}
+
+/* Light theme shimmer */
+[data-theme="light"] .shimmer {
+  background: linear-gradient(90deg, rgba(124,58,237,0.05) 0%, rgba(124,58,237,0.15) 50%, rgba(124,58,237,0.05) 100%);
+}
+
+/* ===================================================
+   HOVER GLOW EFFECT
+   =================================================== */
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+.hover-glow:hover {
+  box-shadow: 0 0 24px rgba(124,58,237,0.4), 0 0 48px rgba(124,58,237,0.2);
+}
+
+/* ===================================================
+   STAGGER ANIMATION UTILITIES
+   =================================================== */
+@keyframes staggerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-item {
+  animation: staggerFadeUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
+
+/* ===================================================
+   COUNTER ANIMATION
+   =================================================== */
+@keyframes countUp {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-count-up {
+  animation: countUp 0.6s ease-out;
 }

@@ -40,7 +40,7 @@ function buildMessage(data: ContactFormValues): string {
   const dayName = getDayName(data.date);
   const time12 = to12Hour(data.time);
   const dateDisplay = `${dayName}, ${formatDateDisplay(data.date)} at ${time12}`;
-  return `Hello NerryLinks! My name is "${fullName}"${nicknameClause}. I am from "${data.area}" of "${data.state}". Please I will be needing "${data.serviceNeeds}". Please confirm on WhatsApp, Call or Text if you are available on "${dateDisplay}" to talk business.`;
+  return `Hello Nerrylink's! My name is "${fullName}"${nicknameClause}. I am from "${data.area}" of "${data.state}". Please I will be needing "${data.serviceNeeds}". Please confirm on WhatsApp, Call or Text if you are available on "${dateDisplay}" to talk business.`;
 }
 
 const WA_ICON = (

@@ -1,4 +1,10 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "About Us — Nerrylink's Gadget Store",
+  description: "Learn about Nerrylink's Gadget Store — a CAC-registered Nigerian business serving retail, wholesale, government, and NGO clients with quality tech products and services.",
+};
 
 export default function AboutPage() {
   return (
@@ -9,7 +15,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
         <div className="relative z-10 px-6 pb-10 max-w-5xl mx-auto w-full animate-fade-up">
           <span className="inline-block glass px-4 py-1.5 rounded-full text-xs font-semibold text-sky-300 uppercase tracking-widest mb-3">About Us</span>
-          <h1 className="text-3xl sm:text-5xl font-black text-white">Nerrylink's Gadgets Store</h1>
+          <h1 className="text-3xl sm:text-5xl font-black text-white">Nerrylink's Gadget Store</h1>
           <p className="mt-2 text-white/60">
             <span className="text-emerald-400 font-semibold">CAC Registered Business</span> · Nerrylink's Global Services
           </p>
@@ -35,7 +41,7 @@ export default function AboutPage() {
           <div className="glass p-8 rounded-2xl space-y-4 animate-fade-up">
             <h2 className="text-xl font-bold text-white">Our Story</h2>
             <p className="text-white/70 leading-relaxed">
-              Nerrylink's Gadgets Store is a <strong className="text-emerald-400">CAC registered Nigerian business</strong> (RC: Nerrylink's Global Services) dedicated to making quality technology accessible to everyone — from individual consumers to large institutions.
+              Nerrylink's Gadget Store is a <strong className="text-emerald-400">CAC registered Nigerian business</strong> (RC: Nerrylink's Global Services) dedicated to making quality technology accessible to everyone — from individual consumers to large institutions.
             </p>
             <p className="text-white/70 leading-relaxed">
               We serve <strong className="text-white">B2C</strong> (retail), <strong className="text-white">B2B</strong> (businesses), <strong className="text-white">B2G</strong> (government), and <strong className="text-white">B2NGO</strong> (non-profits) — offering retail and wholesale supply of laptops, smartphones, gadgets, and bags.
@@ -92,7 +98,7 @@ export default function AboutPage() {
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" className="text-sky-400 mt-0.5 flex-shrink-0"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                   <div>
                     <p className="text-white font-medium">Facebook</p>
-                    <a href="https://web.facebook.com/profile.php?id=100067730592515" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-300 transition-colors">Nerrylink's Gadgets Store</a>
+                    <a href="https://web.facebook.com/profile.php?id=100067730592515" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:text-sky-300 transition-colors">Nerrylink's Gadget Store</a>
                   </div>
                 </div>
               </div>

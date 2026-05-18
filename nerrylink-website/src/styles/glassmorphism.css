@@ -7,6 +7,10 @@
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.glass:hover {
+  border-color: rgba(255, 255, 255, 0.18);
 }
 .glass-dark {
   background: rgba(0, 0, 0, 0.25);
@@ -23,16 +27,47 @@
   border-radius: 16px;
 }
 
+/* Elevated glass — for stats/feature cards */
+.glass-elevated {
+  background: rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* Gradient border — subtle purple-red tinted ring */
+.gradient-border {
+  position: relative;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 0 0 1px rgba(124,58,237,0.35), 0 0 0 1px rgba(220,38,38,0.15);
+}
+
+/* Glow — purple accent */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(124,58,237,0.2), 0 0 60px rgba(124,58,237,0.08);
+}
+.glow-purple-sm {
+  box-shadow: 0 0 12px rgba(124,58,237,0.3);
+}
+
 /* ===================================================
    GLASSMORPHISM — Light theme
    =================================================== */
 [data-theme="light"] .glass {
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.62);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(107, 33, 168, 0.15);
+  border: 1px solid rgba(107, 33, 168, 0.14);
   border-radius: 16px;
-  box-shadow: 0 4px 24px rgba(107, 33, 168, 0.08);
+  box-shadow: 0 4px 24px rgba(107, 33, 168, 0.07);
+}
+[data-theme="light"] .glass:hover {
+  border-color: rgba(124, 58, 237, 0.28);
+  box-shadow: 0 6px 32px rgba(107, 33, 168, 0.12);
 }
 [data-theme="light"] .glass-dark {
   background: rgba(255, 255, 255, 0.35);
@@ -47,4 +82,61 @@
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 8px 32px rgba(107, 33, 168, 0.1);
   border-radius: 16px;
+}
+[data-theme="light"] .glass-elevated {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(107, 33, 168, 0.16);
+  box-shadow: 0 8px 40px rgba(107, 33, 168, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* ===================================================
+   ENHANCED GLASSMORPHISM UTILITIES
+   =================================================== */
+
+/* Gradient border with glow */
+.glass-gradient-border {
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(220,38,38,0.08)) border-box;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 0 20px rgba(124,58,237,0.15);
+}
+
+/* Enhanced glow variants */
+.glow-sky {
+  box-shadow: 0 0 20px rgba(14,165,233,0.3), 0 0 40px rgba(14,165,233,0.15);
+}
+.glow-violet {
+  box-shadow: 0 0 20px rgba(139,92,246,0.3), 0 0 40px rgba(139,92,246,0.15);
+}
+.glow-pink {
+  box-shadow: 0 0 20px rgba(236,72,153,0.3), 0 0 40px rgba(236,72,153,0.15);
+}
+
+/* Shimmer overlay effect */
+.shimmer-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  animation: shimmerMove 2s infinite;
+}
+
+/* Light theme glow variants */
+[data-theme="light"] .glow-sky {
+  box-shadow: 0 0 20px rgba(124,58,237,0.25), 0 0 40px rgba(124,58,237,0.12);
+}
+[data-theme="light"] .glow-violet {
+  box-shadow: 0 0 20px rgba(124,58,237,0.25), 0 0 40px rgba(124,58,237,0.12);
+}
+[data-theme="light"] .glow-pink {
+  box-shadow: 0 0 20px rgba(236,72,153,0.2), 0 0 40px rgba(236,72,153,0.1);
 }

@@ -1,5 +1,11 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { ProductShowcase } from '@/components/sections/ProductShowcase';
+
+export const metadata: Metadata = {
+  title: "Products — Laptops, Phones, Gadgets & Bags | Nerrylink's Gadget Store",
+  description: "Browse our catalogue of laptops, phones, gadgets, and bags. Retail and wholesale supply for individuals, businesses, government, and NGOs across Nigeria.",
+};
 
 export default function ProductsPage() {
   return (

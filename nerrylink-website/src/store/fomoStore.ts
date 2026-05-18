@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import { PROMO_COUNTDOWN_END } from '@/lib/constants';
 
 interface FOMOState {
   countdownTarget: string;
@@ -9,11 +10,8 @@ interface FOMOState {
   setViewCount: (productId: string, count: number) => void;
 }
 
-// Seed: countdown ~7 days from now
-const sevenDaysFromNow = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString();
-
 export const useFOMOStore = create<FOMOState>((set) => ({
-  countdownTarget: sevenDaysFromNow,
+  countdownTarget: PROMO_COUNTDOWN_END,
   stockLevels: {
     'hp-new': 3, 'hp-modern': 5, 'hp-fold': 2, 'hp-touch': 4, 'hp-touch2': 3, 'hp-range': 8, 'hp-fold2': 2,
     'dell-laptop': 6, 'dell-fold': 1,

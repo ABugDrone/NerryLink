@@ -10,12 +10,12 @@ function NerryLinkLogo() {
   const isLight = theme === 'light';
 
   return (
-    <Link href="/" className="flex items-center gap-2.5 group" aria-label="Nerrylink's Gadgets Store home">
+    <Link href="/" className="flex items-center gap-2.5 group" aria-label="Nerrylink's Gadget Store home">
       {/* Logo SVG from public/logo.svg */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/logo.svg"
-        alt="Nerrylink's Gadgets Store logo"
+        alt="Nerrylink's Gadget Store logo"
         width={38}
         height={38}
         className="flex-shrink-0"
@@ -32,7 +32,7 @@ function NerryLinkLogo() {
         <span className={`text-[9px] font-semibold uppercase tracking-widest ${
           isLight ? 'text-[#DC2626]' : 'text-red-400/80'
         }`}>
-          Gadgets Store
+          Gadget Store
         </span>
       </div>
     </Link>

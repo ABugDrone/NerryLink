@@ -125,6 +125,7 @@ export function TestimonialsSection() {
   const isLight = theme === 'light';
   const [current, setCurrent] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [paused, setPaused] = useState(false);
 
   const advance = useCallback(() => {
     setVisible(false);
@@ -135,9 +136,10 @@ export function TestimonialsSection() {
   }, []);
 
   useEffect(() => {
+    if (paused) return;
     const id = setInterval(advance, DISPLAY_DURATION + FADE_DURATION);
     return () => clearInterval(id);
-  }, [advance]);
+  }, [advance, paused]);
 
   const t = testimonials[current];
 
@@ -157,7 +159,8 @@ export function TestimonialsSection() {
           >
             What Our Customers Say
           </h2>
-          <p className="mt-2 text-[var(--text-secondary)] text-sm">
+          <span className="section-accent-line" aria-hidden="true" />
+          <p className="mt-4 text-[var(--text-secondary)] text-sm">
             Real people, real purchases, real satisfaction.
           </p>
         </div>
@@ -172,6 +175,10 @@ export function TestimonialsSection() {
           }}
           aria-live="polite"
           aria-atomic="true"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          onFocus={() => setPaused(true)}
+          onBlur={() => setPaused(false)}
         >
           {/* Decorative quote mark */}
           <div

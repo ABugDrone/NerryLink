@@ -44,7 +44,7 @@ export function ContactSection() {
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
                 <div>
                   <p className="font-semibold text-sm">Facebook</p>
-                  <p className="text-xs text-sky-400/70">Nerrylink's Gadgets Store</p>
+                  <p className="text-xs text-sky-400/70">Nerrylink's Gadget Store</p>
                 </div>
               </a>
             </div>

@@ -1,5 +1,11 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { ServiceGrid } from '@/components/sections/ServiceGrid';
+
+export const metadata: Metadata = {
+  title: "Tech Services — Repairs, Upgrades & Wholesale | Nerrylink's Gadget Store",
+  description: "Expert tech services including repairs, software installs, hardware upgrades, B2B wholesale, government procurement (B2G), and NGO supply (B2NGO) in Nigeria.",
+};
 
 export default function ServicesPage() {
   return (
