@@ -87,7 +87,7 @@ export function Hero() {
         <motion.h1 variants={itemVariants} className={`text-4xl sm:text-5xl lg:text-7xl font-black leading-tight mb-4 ${
           isLight ? 'text-[#1a0533]' : 'text-white'
         }`}>
-          NerryLink{' '}
+          NerryLink&apos;s{' '}
           <span className={isLight
             ? 'bg-gradient-to-r from-[#6B21A8] to-[#DC2626] bg-clip-text text-transparent'
             : 'bg-gradient-to-r from-violet-400 via-purple-300 to-pink-400 bg-clip-text text-transparent'
