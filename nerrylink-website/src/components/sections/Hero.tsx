@@ -84,15 +84,33 @@ export function Hero() {
           Nigeria&apos;s Trusted Tech Store
         </motion.span>
 
-        <motion.h1 variants={itemVariants} className={`text-4xl sm:text-5xl lg:text-7xl font-black leading-tight mb-4 ${
-          isLight ? 'text-[#1a0533]' : 'text-white'
-        }`}>
-          NerryLink&apos;s{' '}
-          <span className={isLight
+        <motion.h1 
+          variants={itemVariants} 
+          className={`relative text-4xl sm:text-5xl lg:text-7xl font-black leading-tight mb-4 ${
+            isLight ? 'text-[#1a0533]' : 'text-white'
+          }`}
+        >
+          <span className="inline-flex items-start gap-2">
+            <svg 
+              width="32" 
+              height="32" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="1.5"
+              className="text-sky-400 animate-float mt-1 flex-shrink-0"
+              aria-hidden="true"
+            >
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+            <span className="animate-glitch-text">NerryLink&apos;s</span>
+          </span>{' '}
+          <span className={`animate-glitch-text ${isLight
             ? 'bg-gradient-to-r from-[#6B21A8] to-[#DC2626] bg-clip-text text-transparent'
             : 'bg-gradient-to-r from-violet-400 via-purple-300 to-pink-400 bg-clip-text text-transparent'
-          }>Gadget</span>
-          <br />Store
+          }`}>Gadget</span>
+          <br />
+          <span className="animate-glitch-text">Store</span>
         </motion.h1>
 
         <motion.p variants={itemVariants} className={`text-xs sm:text-sm font-bold mb-4 tracking-wide flex items-center justify-center gap-2 ${

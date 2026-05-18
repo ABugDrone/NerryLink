@@ -678,3 +678,56 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 .animate-count-up {
   animation: countUp 0.6s ease-out;
 }
+
+/* ===================================================
+   GLITCH TEXT ANIMATION (Tech-themed)
+   =================================================== */
+@keyframes glitchText {
+  0% {
+    transform: translate(0);
+    opacity: 1;
+  }
+  20% {
+    transform: translate(-2px, 2px);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translate(-2px, -2px);
+    opacity: 0.9;
+  }
+  60% {
+    transform: translate(2px, 2px);
+    opacity: 0.85;
+  }
+  80% {
+    transform: translate(2px, -2px);
+    opacity: 0.95;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.animate-glitch-text {
+  display: inline-block;
+  animation: glitchText 3s ease-in-out infinite;
+  animation-delay: calc(var(--delay, 0) * 0.3s);
+}
+
+.animate-glitch-text:nth-child(1) {
+  --delay: 0;
+}
+
+.animate-glitch-text:nth-child(2) {
+  --delay: 1;
+}
+
+.animate-glitch-text:nth-child(3) {
+  --delay: 2;
+}
+
+/* Pause animation on hover for better readability */
+.animate-glitch-text:hover {
+  animation-play-state: paused;
+}
