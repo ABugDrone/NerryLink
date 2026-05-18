@@ -90,7 +90,8 @@ export function Hero() {
             isLight ? 'text-[#1a0533]' : 'text-white'
           }`}
         >
-          <span className="inline-flex items-start gap-2">
+          <span className="inline-flex items-center gap-2">
+            {/* Laptop Icon */}
             <svg 
               width="32" 
               height="32" 
@@ -98,10 +99,12 @@ export function Hero() {
               fill="none" 
               stroke="currentColor" 
               strokeWidth="1.5"
-              className="text-sky-400 animate-star-converge-1 mt-1 flex-shrink-0"
+              className="text-sky-400/30 animate-star-converge-1 flex-shrink-0"
               aria-hidden="true"
             >
-              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <line x1="8" y1="21" x2="16" y2="21"/>
+              <line x1="12" y1="17" x2="12" y2="21"/>
             </svg>
             <span className="animate-slide-from-left inline-block">NerryLink&apos;s</span>
           </span>{' '}
@@ -109,6 +112,7 @@ export function Hero() {
             ? 'bg-gradient-to-r from-[#6B21A8] to-[#DC2626] bg-clip-text text-transparent'
             : 'bg-gradient-to-r from-violet-400 via-purple-300 to-pink-400 bg-clip-text text-transparent'
           }`}>Gadget</span>
+          {/* Phone Icon */}
           <svg 
             width="28" 
             height="28" 
@@ -116,13 +120,43 @@ export function Hero() {
             fill="none" 
             stroke="currentColor" 
             strokeWidth="1.5"
-            className="text-violet-400 animate-star-converge-2 inline-block ml-2 mb-1"
+            className="text-violet-400/30 animate-star-converge-2 inline-block ml-2"
             aria-hidden="true"
           >
-            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            <rect x="5" y="2" width="14" height="20" rx="2"/>
+            <line x1="12" y1="18" x2="12.01" y2="18"/>
           </svg>
           <br />
           <span className="animate-slide-from-bottom inline-block">Store</span>
+          {/* Headphone Icon */}
+          <svg 
+            width="30" 
+            height="30" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="1.5"
+            className="text-pink-400/30 animate-icon-converge-3 inline-block ml-2"
+            aria-hidden="true"
+          >
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+          </svg>
+          {/* Bag Icon */}
+          <svg 
+            width="28" 
+            height="28" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="1.5"
+            className="text-amber-400/30 animate-icon-converge-4 inline-block ml-1"
+            aria-hidden="true"
+          >
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
         </motion.h1>
 
         <motion.p variants={itemVariants} className={`text-xs sm:text-sm font-bold mb-4 tracking-wide flex items-center justify-center gap-2 ${

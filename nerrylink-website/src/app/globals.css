@@ -747,11 +747,11 @@ h3.font-bold, h3.font-semibold, h3.font-black {
     opacity: 0;
   }
   60% {
-    opacity: 1;
+    opacity: 0.3;
   }
   100% {
     transform: translate(0, 0) rotate(0deg);
-    opacity: 1;
+    opacity: 0.3;
   }
 }
 
@@ -766,11 +766,11 @@ h3.font-bold, h3.font-semibold, h3.font-black {
     opacity: 0;
   }
   60% {
-    opacity: 1;
+    opacity: 0.3;
   }
   100% {
     transform: translate(0, 0) rotate(0deg) scale(1);
-    opacity: 1;
+    opacity: 0.3;
   }
 }
 
@@ -802,4 +802,44 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 .animate-star-converge-2 {
   animation: starConverge2 5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
              floatAfterConverge 3s ease-in-out 5.5s infinite;
+}
+
+/* Icon 3 (Headphone) - comes from top-left diagonal */
+@keyframes iconConverge3 {
+  0% {
+    transform: translate(-70vw, -70vh) rotate(-270deg) scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+}
+
+.animate-icon-converge-3 {
+  animation: iconConverge3 5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+             floatAfterConverge 3s ease-in-out 6s infinite;
+}
+
+/* Icon 4 (Bag) - comes from bottom-right diagonal */
+@keyframes iconConverge4 {
+  0% {
+    transform: translate(90vw, 90vh) rotate(270deg) scale(0.4);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+}
+
+.animate-icon-converge-4 {
+  animation: iconConverge4 5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+             floatAfterConverge 3s ease-in-out 6.5s infinite;
 }
