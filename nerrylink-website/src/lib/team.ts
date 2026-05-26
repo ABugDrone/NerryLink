@@ -23,9 +23,9 @@ export const team: TeamMember[] = [
   },
   {
     id: 'denis',
-    name: 'Denis Christopher',
+    name: 'Christopher Dennis',
     role: 'Chief Technician',
-    photoUrl: 'https://scontent.fabv2-2.fna.fbcdn.net/v/t51.82787-15/671261907_18096516347472576_4516186238332219262_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=13d280&_nc_eui2=AeH52p3d0SA7I3Ikqd3o72Q7zRvpNxsvUJLNG-k3Gy9Qksw-aFspZRewfeoO_mIS29tEjFEjgdr4It9T38uoVZBH&_nc_ohc=ZaDB3zFt2FwQ7kNvwHvdIY0&_nc_oc=Adr1si9X659aB6icMS7oN7Aq5OFJu-1qVk03R29ZfAQwPQhUqVCBewkZvonaCqNwUfY&_nc_zt=23&_nc_ht=scontent.fabv2-2.fna&_nc_gid=arCo7h6tq3d_R9k9YG26_A&_nc_ss=7b2a8&oh=00_Af0tgVeufsw0gut0HHemPF8c7zAakMpNxRq4Pws3pJnTGA&oe=69F54103',
+    photoUrl: '/assets/images/Team images/Dennis Chris.jpeg',
     facebookUrl: 'https://www.facebook.com/christopher.dennis.16940',
   },
 ];

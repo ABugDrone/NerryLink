@@ -113,7 +113,7 @@ export function Navigation() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed inset-0 z-[9998] bg-black/40 backdrop-blur-sm md:hidden"
+              className="fixed inset-0 z-[9998] bg-black/60 backdrop-blur-sm md:hidden"
               onClick={() => setOpen(false)}
             />
 
@@ -128,10 +128,8 @@ export function Navigation() {
               className="fixed top-0 right-0 bottom-0 z-[9999] w-[85vw] max-w-sm flex flex-col md:hidden"
               style={{
                 background: isLight
-                  ? 'rgba(248,245,255,0.97)'
-                  : 'rgba(8,8,20,0.97)',
-                backdropFilter: 'blur(24px)',
-                WebkitBackdropFilter: 'blur(24px)',
+                  ? 'rgb(248,245,255)'
+                  : 'rgb(15,13,24)',
                 borderLeft: isLight
                   ? '1px solid rgba(107,33,168,0.15)'
                   : '1px solid rgba(255,255,255,0.08)',
