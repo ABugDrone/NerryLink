@@ -4,6 +4,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { WhatsAppIntegration } from '@/components/forms/WhatsAppIntegration';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
+import { PwaInstallPrompt } from '@/components/ui/PwaInstallPrompt';
 
 export const metadata: Metadata = {
   title: 'Nerrylink\'s Gadget Store — Nigeria\'s Trusted Tech Store',
@@ -28,6 +29,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#7C3AED" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#6B21A8" media="(prefers-color-scheme: light)" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Nerrylink" />
+        <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="shortcut icon" href="/favicon.svg" />
         <link rel="apple-touch-icon" href="/logo.svg" />
@@ -49,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           })();
         `}} />
       </head>
-      <body className="antialiased transition-colors duration-300" suppressHydrationWarning>
+<body className="antialiased transition-colors duration-300" suppressHydrationWarning>
         <ThemeProvider>
           {/* Skip to main content — keyboard / screen-reader accessibility */}
           <a
@@ -62,6 +69,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main id="main-content">{children}</main>
           <Footer />
           <WhatsAppIntegration />
+          <PwaInstallPrompt />
         </ThemeProvider>
       </body>
     </html>
