@@ -4,6 +4,7 @@ export interface Product {
   category: 'pcs-laptops' | 'mobile' | 'gadgets' | 'bags';
   description: string;
   imagePath: string;
+  gallery?: string[];
   isRefurbished: boolean;
   isWholesale?: boolean;
   clientTypes?: Array<'B2C' | 'B2B' | 'B2G' | 'B2NGO'>;
@@ -27,13 +28,13 @@ export const products: Product[] = [
 
   { id: 'hp-fold', name: 'HP Fold', category: 'pcs-laptops',
     description: 'Innovative HP foldable laptop — versatile and portable. Ideal for executives and field teams.',
-    imagePath: '/assets/images/HP fold.jpeg', isRefurbished: false,
+    imagePath: '/assets/images/HP fold.jpeg', gallery: ['/assets/images/HP fold.jpeg', '/assets/images/HP fold 2.jpeg'], isRefurbished: false,
     clientTypes: ['B2C', 'B2B'],
     whatsappInquiryText: 'I am interested in the HP Fold laptop.' },
 
   { id: 'hp-touch', name: 'HP Touchscreen', category: 'pcs-laptops',
     description: 'HP laptop with responsive touchscreen display. Great for presentations and interactive work.',
-    imagePath: '/assets/images/HP touch.jpeg', isRefurbished: false,
+    imagePath: '/assets/images/HP touch.jpeg', gallery: ['/assets/images/HP touch.jpeg', '/assets/images/HP touch 2.jpeg'], isRefurbished: false,
     clientTypes: ['B2C', 'B2B', 'B2G'],
     whatsappInquiryText: 'I am interested in the HP Touchscreen laptop.' },
 
@@ -45,7 +46,7 @@ export const products: Product[] = [
 
   { id: 'hp-range', name: 'HP Full Range', category: 'pcs-laptops',
     description: 'Full HP lineup — older and new models available. Great for bulk institutional orders.',
-    imagePath: '/assets/images/HP older and new models.jpeg', isRefurbished: false,
+    imagePath: '/assets/images/HP older and new models.jpeg', gallery: ['/assets/images/HP new.jpeg', '/assets/images/Modern HP.jpeg', '/assets/images/HP older and new models.jpeg'], isRefurbished: false,
     clientTypes: ['B2C', 'B2B', 'B2G', 'B2NGO'],
     whatsappInquiryText: 'I am interested in the HP full range. Please share available models and pricing.' },
 
@@ -69,7 +70,7 @@ export const products: Product[] = [
 
   { id: 'lenovo-new', name: 'Lenovo New', category: 'pcs-laptops',
     description: 'Latest Lenovo laptop with powerful performance. Wholesale supply for schools, NGOs, and government offices.',
-    imagePath: '/assets/images/Lenovo New.jpeg', isRefurbished: false,
+    imagePath: '/assets/images/Lenovo New.jpeg', gallery: ['/assets/images/Lenovo New.jpeg', '/assets/images/Lenovo Inside.jpeg'], isRefurbished: false,
     clientTypes: ['B2C', 'B2B', 'B2G', 'B2NGO'],
     whatsappInquiryText: 'I am interested in the Lenovo New laptop.' },
 
