@@ -43,7 +43,7 @@ function AnimatedCounter({ value, suffix = '', prefix = '' }: { value: number; s
   }, [isInView, value]);
 
   return (
-    <span ref={ref} className="stat-number text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-violet-500">
+    <span ref={ref} className="stat-number block text-xl xs:text-2xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-violet-500 truncate">
       {prefix}
       {displayValue.toLocaleString()}
       {suffix}
@@ -86,7 +86,7 @@ export function StatsBar() {
             <motion.div
               key={i}
               variants={itemVariants}
-              className="glass-elevated p-6 sm:p-8 rounded-2xl text-center hover-glow transition-all duration-300 group"
+              className="glass-elevated p-4 sm:p-8 rounded-2xl text-center hover-glow transition-all duration-300 group overflow-hidden"
             >
               <div className="mb-4 sm:mb-6">
                 <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix} />
