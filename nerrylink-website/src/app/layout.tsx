@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import { WhatsAppIntegration } from '@/components/forms/WhatsAppIntegration';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
 import { PwaInstallPrompt } from '@/components/ui/PwaInstallPrompt';
+import { LivePurchaseTicker } from '@/components/fomo/LivePurchaseTicker';
 import { OrganizationSchema, WebSiteSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
@@ -74,6 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Footer />
           <WhatsAppIntegration />
           <PwaInstallPrompt />
+          <LivePurchaseTicker />
         </ThemeProvider>
       </body>
     </html>

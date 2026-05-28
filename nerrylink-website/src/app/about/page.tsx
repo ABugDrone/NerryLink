@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import { FAQSection } from '@/components/sections/FAQSection';
 
 export const metadata: Metadata = {
   title: "About Us — Nerrylink's Gadget Store",
@@ -278,6 +279,8 @@ export default function AboutPage() {
             width="100%" height="400" style={{ border: 0 }} allowFullScreen loading="lazy"
             referrerPolicy="no-referrer-when-downgrade" title="NerryLink location on Google Maps" />
         </div>
+
+        <FAQSection />
       </section>
     </div>
   );
