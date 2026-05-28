@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { StockIndicator } from '@/components/fomo/StockIndicator';
@@ -113,7 +114,9 @@ export function ProductCard({
         {/* Info */}
         <div className="p-4 space-y-2">
           <h3 className="text-[var(--text-primary)] font-semibold text-sm leading-snug">
-            {product.name}
+            <Link href={`/products/${product.id}/`} className="hover:text-sky-400 transition-colors" onClick={(e) => e.stopPropagation()}>
+              {product.name}
+            </Link>
           </h3>
           <p className="text-[var(--text-secondary)] text-xs leading-relaxed line-clamp-2">
             {product.description}
@@ -134,6 +137,14 @@ export function ProductCard({
             <StockIndicator quantity={stockLevel} />
           </div>
           <SocialProof viewCount={viewCount} />
+          <Link
+            href={`/products/${product.id}/`}
+            className="text-[10px] font-semibold text-sky-400/70 hover:text-sky-400 transition-colors flex items-center gap-1 pt-1"
+            onClick={(e) => e.stopPropagation()}
+          >
+            View Details
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M9 18l6-6-6-6"/></svg>
+          </Link>
         </div>
       </GlassCard>
     </motion.div>
