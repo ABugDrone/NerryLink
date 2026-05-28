@@ -29,6 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="DroneBug Technologies and Services" />
         <meta name="theme-color" content="#7C3AED" media="(prefers-color-scheme: dark)" />
         <meta name="theme-color" content="#6B21A8" media="(prefers-color-scheme: light)" />
         <meta name="apple-mobile-web-app-capable" content="yes" />

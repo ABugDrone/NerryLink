@@ -88,12 +88,11 @@ export function PwaInstallPrompt() {
       {!showBanner && !dismissed && (
         <button
           onClick={handleInstallClick}
-          className="fixed bottom-20 right-4 z-[9998] w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 text-white shadow-lg shadow-violet-500/30 flex items-center justify-center hover:from-violet-600 hover:to-purple-700 hover:scale-110 transition-all duration-300 animate-slide-up"
+          className="fixed bottom-20 right-4 z-[9998] w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg shadow-violet-500/20 flex items-center justify-center hover:scale-110 transition-all duration-300 animate-slide-up overflow-hidden"
           aria-label="Install app"
         >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
-          </svg>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logo.svg" alt="Nerrylink" className="w-8 h-8" />
         </button>
       )}
 
@@ -102,14 +101,12 @@ export function PwaInstallPrompt() {
         <div className="fixed bottom-20 left-4 right-4 sm:left-auto sm:right-4 sm:w-80 z-[9999] animate-slide-up" role="dialog" aria-label="Install app">
           <div className="glass-elevated p-4 rounded-2xl shadow-2xl">
             <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
-                </svg>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.svg" alt="Nerrylink" className="flex-shrink-0 w-11 h-11 rounded-xl" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-bold text-[var(--text-primary)]">Install Nerrylink&apos;s</p>
                 <p className="text-xs text-[var(--text-muted)] mt-1">Add to home screen for quick access</p>
+                <p className="text-[10px] text-[var(--text-muted)]/50 mt-0.5">by DroneBug Technologies</p>
                 <div className="flex gap-2 mt-3">
                   <button
                     onClick={handleInstall}
@@ -136,11 +133,8 @@ export function PwaInstallPrompt() {
           <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
           <div className={`relative z-10 p-6 rounded-3xl max-w-sm w-full mb-8 ${isLight ? 'bg-white shadow-2xl' : 'glass-elevated'}`}>
             <div className="text-center mb-4">
-              <div className="mx-auto w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center mb-3">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
-                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
-                </svg>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.svg" alt="Nerrylink" className="mx-auto w-16 h-16 rounded-2xl mb-3" />
               <p className="text-lg font-black text-[var(--text-primary)]">Add to Home Screen</p>
               <p className={`text-sm mt-2 leading-relaxed ${isLight ? 'text-gray-500' : 'text-[var(--text-secondary)]'}`}>
                 Tap the <strong className={isLight ? 'text-[#6B21A8]' : 'text-violet-400'}>Share</strong> button in your browser, then tap <strong className={isLight ? 'text-[#6B21A8]' : 'text-violet-400'}>&ldquo;Add to Home Screen&rdquo;</strong>
@@ -166,11 +160,8 @@ export function PwaInstallPrompt() {
         <div className="fixed bottom-20 left-4 right-4 sm:left-auto sm:right-4 sm:w-80 z-[9999] animate-slide-up" role="dialog" aria-label="Install app">
           <div className="glass-elevated p-4 rounded-2xl shadow-2xl">
             <div className="flex items-start gap-3">
-              <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" aria-hidden="true">
-                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
-                </svg>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo.svg" alt="Nerrylink" className="flex-shrink-0 w-11 h-11 rounded-xl" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-bold text-[var(--text-primary)]">Install Nerrylink&apos;s</p>
                 <p className="text-xs text-[var(--text-muted)] mt-1">Add to home screen for quick access</p>
