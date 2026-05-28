@@ -16,7 +16,7 @@ export const products: Product[] = [
   // ── PCs & Laptops ──────────────────────────────────────────────
   { id: 'hp-new', name: 'HP New Model', category: 'pcs-laptops',
     description: 'Brand new HP laptop with latest specs. Available for retail and bulk wholesale orders for businesses, schools, and government agencies.',
-    imagePath: '/assets/images/HP new.jpeg', isRefurbished: false,
+    imagePath: '/assets/images/HP new.jpeg', gallery: ['/assets/images/HP new.jpeg', '/assets/images/Modern HP.jpeg'], isRefurbished: false,
     clientTypes: ['B2C', 'B2B', 'B2G', 'B2NGO'],
     whatsappInquiryText: 'I am interested in the HP New Model laptop.' },
 
@@ -58,7 +58,7 @@ export const products: Product[] = [
 
   { id: 'dell-laptop', name: 'Dell Laptop', category: 'pcs-laptops',
     description: 'Reliable Dell laptop for business and personal use. Bulk supply available for corporate and government procurement.',
-    imagePath: '/assets/images/Dell .jpeg', isRefurbished: false,
+    imagePath: '/assets/images/Dell .jpeg', gallery: ['/assets/images/Dell .jpeg', '/assets/images/Dell Fold.jpeg'], isRefurbished: false,
     clientTypes: ['B2C', 'B2B', 'B2G', 'B2NGO'],
     whatsappInquiryText: 'I am interested in the Dell laptop.' },
 
@@ -88,7 +88,7 @@ export const products: Product[] = [
 
   { id: 'apple-macbook', name: 'MacBook Pro', category: 'pcs-laptops',
     description: 'Apple MacBook Pro — premium performance for professionals and creative teams.',
-    imagePath: '/assets/images/Macbookpro.jpeg', isRefurbished: false,
+    imagePath: '/assets/images/Macbookpro.jpeg', gallery: ['/assets/images/Macbookpro.jpeg', '/assets/images/Apple PC.jpeg'], isRefurbished: false,
     clientTypes: ['B2C', 'B2B'],
     whatsappInquiryText: 'I am interested in the MacBook Pro.' },
 
@@ -100,7 +100,7 @@ export const products: Product[] = [
 
   { id: 'thinkpad-touch', name: 'ThinkPad Touch', category: 'pcs-laptops',
     description: 'ThinkPad with touchscreen — business-grade reliability trusted by enterprises and government.',
-    imagePath: '/assets/images/Thinkpad touch.jpeg', isRefurbished: false,
+    imagePath: '/assets/images/Thinkpad touch.jpeg', gallery: ['/assets/images/Thinkpad touch.jpeg', '/assets/images/Thinkpad touch 2.jpeg'], isRefurbished: false,
     clientTypes: ['B2C', 'B2B', 'B2G'],
     whatsappInquiryText: 'I am interested in the ThinkPad Touch.' },
 
@@ -125,7 +125,7 @@ export const products: Product[] = [
   // ── Mobile Devices ─────────────────────────────────────────────
   { id: 'iphone', name: 'iPhones', category: 'mobile',
     description: 'Latest Apple iPhone lineup — new and refurbished. Retail and wholesale supply available.',
-    imagePath: '/assets/images/iPRO.jpeg', isRefurbished: false,
+    imagePath: '/assets/images/iPRO.jpeg', gallery: ['/assets/images/iPRO.jpeg', '/assets/images/fold.jpeg'], isRefurbished: false,
     clientTypes: ['B2C', 'B2B'],
     whatsappInquiryText: 'I am interested in iPhones. Please share available models and prices.' },
 

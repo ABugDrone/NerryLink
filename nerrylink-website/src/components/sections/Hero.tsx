@@ -1,13 +1,10 @@
 'use client';
 import { GlassButton } from '@/components/ui/GlassButton';
-import { CountdownTimer } from '@/components/fomo/CountdownTimer';
-import { useFOMOStore } from '@/store/fomoStore';
 import { useTheme } from '@/components/ui/ThemeProvider';
 import { useRef, useState, useCallback, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 export function Hero() {
-  const countdownTarget = useFOMOStore((s) => s.countdownTarget);
   const { theme } = useTheme();
   const isLight = theme === 'light';
 
@@ -187,10 +184,6 @@ export function Hero() {
             </svg>
             Contact Us
           </GlassButton>
-        </motion.div>
-
-        <motion.div variants={itemVariants} className="flex justify-center mb-6">
-          <CountdownTimer targetDate={countdownTarget} />
         </motion.div>
 
         {/* Client type badges — scroll horizontally on mobile */}

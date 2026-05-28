@@ -50,6 +50,8 @@ export function ProductShowcase() {
   const [isMobile, setIsMobile]   = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [clientFilter, setClientFilter] = useState<string>('All');
   const tabListRef = useRef<HTMLDivElement>(null);
   const stockLevels = useFOMOStore((s) => s.stockLevels);
   const viewCounts  = useFOMOStore((s) => s.viewCounts);
@@ -77,7 +79,15 @@ export function ProductShowcase() {
     return () => el.removeEventListener('scroll', handleTabScroll);
   }, [handleTabScroll]);
 
-  const filtered     = products.filter((p) => p.category === activeCategory);
+  const filtered = products.filter((p) => {
+    if (p.category !== activeCategory) return false;
+    if (clientFilter !== 'All' && !(p.clientTypes ?? []).includes(clientFilter as any)) return false;
+    if (searchQuery) {
+      const q = searchQuery.toLowerCase();
+      return p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q);
+    }
+    return true;
+  });
   const cardVariants = getCardVariants(isMobile);
 
   const openWhatsApp = (product: Product) => {
@@ -137,6 +147,51 @@ export function ProductShowcase() {
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             />
           </div>
+        )}
+      </div>
+
+      {/* Search & Client Type Filter */}
+      <div className="px-4 sm:px-6 mb-6 space-y-3">
+        <div className="relative">
+          <svg className="absolute left-3.5 top-1/2 -translate-y-1/2 text-[var(--text-muted)]" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="8" /><path d="M21 21l-4.3-4.3" />
+          </svg>
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="glass w-full pl-10 pr-4 py-2.5 rounded-xl text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)]/60 focus:outline-none focus:border-sky-400/50 focus:ring-1 focus:ring-sky-400/30 transition-all"
+          />
+          {searchQuery && (
+            <button
+              onClick={() => setSearchQuery('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors"
+              aria-label="Clear search"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12" /></svg>
+            </button>
+          )}
+        </div>
+        <div className="flex flex-wrap gap-1.5">
+          {['All', 'B2C', 'B2B', 'B2G', 'B2NGO'].map((type) => (
+            <button
+              key={type}
+              onClick={() => setClientFilter(type)}
+              className={`text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full border transition-all ${
+                clientFilter === type
+                  ? 'bg-sky-500/20 border-sky-400/50 text-sky-300'
+                  : 'glass text-[var(--text-muted)] border-white/10 hover:border-white/20 hover:text-[var(--text-primary)]'
+              }`}
+            >
+              {type}
+            </button>
+          ))}
+        </div>
+        {searchQuery && (
+          <p className="text-xs text-[var(--text-muted)]">
+            {filtered.length} result{filtered.length !== 1 ? 's' : ''} found
+          </p>
         )}
       </div>
 

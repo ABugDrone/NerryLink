@@ -18,7 +18,3 @@ export const MAPS_URL =
 
 export const WORKING_HOURS = 'Mon – Sat: 9:00 AM – 7:30 PM';
 export const WORKING_HOURS_SHORT = '9:00 AM – 7:30 PM';
-
-// Countdown end-date — update when a new promotion runs.
-// ISO string: "2026-06-01T00:00:00.000Z"
-export const PROMO_COUNTDOWN_END = '2026-06-01T00:00:00.000Z';

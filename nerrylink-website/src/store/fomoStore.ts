@@ -1,17 +1,13 @@
 import { create } from 'zustand';
-import { PROMO_COUNTDOWN_END } from '@/lib/constants';
 
 interface FOMOState {
-  countdownTarget: string;
   stockLevels: Record<string, number>;
   viewCounts: Record<string, number>;
-  setCountdownTarget: (target: string) => void;
   setStockLevel: (productId: string, qty: number) => void;
   setViewCount: (productId: string, count: number) => void;
 }
 
 export const useFOMOStore = create<FOMOState>((set) => ({
-  countdownTarget: PROMO_COUNTDOWN_END,
   stockLevels: {
     'hp-new': 3, 'hp-modern': 5, 'hp-fold': 2, 'hp-touch': 4, 'hp-touch2': 3, 'hp-range': 8, 'hp-fold2': 2,
     'dell-laptop': 6, 'dell-fold': 1,
@@ -38,7 +34,6 @@ export const useFOMOStore = create<FOMOState>((set) => ({
     'lexus-rx': 203, 'mercedes-gle': 89, 'toyota-corolla': 211,
     'luxury-rental': 94, 'standard-rental': 67,
   },
-  setCountdownTarget: (target) => set({ countdownTarget: target }),
   setStockLevel: (productId, qty) =>
     set((state) => ({ stockLevels: { ...state.stockLevels, [productId]: qty } })),
   setViewCount: (productId, count) =>
