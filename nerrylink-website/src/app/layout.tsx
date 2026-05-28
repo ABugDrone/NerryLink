@@ -4,6 +4,7 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { WhatsAppIntegration } from '@/components/forms/WhatsAppIntegration';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
+import { LocaleProvider } from '@/components/ui/LocaleProvider';
 import { PwaInstallPrompt } from '@/components/ui/PwaInstallPrompt';
 import { LivePurchaseTicker } from '@/components/fomo/LivePurchaseTicker';
 import { OrganizationSchema, WebSiteSchema } from '@/components/seo/JsonLd';
@@ -62,7 +63,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 <body className="antialiased transition-colors duration-300" suppressHydrationWarning>
         <OrganizationSchema />
         <WebSiteSchema />
-        <ThemeProvider>
+        <LocaleProvider>
+          <ThemeProvider>
           {/* Skip to main content — keyboard / screen-reader accessibility */}
           <a
             href="#main-content"
@@ -77,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <PwaInstallPrompt />
           <LivePurchaseTicker />
         </ThemeProvider>
+        </LocaleProvider>
       </body>
     </html>
   );

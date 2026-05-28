@@ -1,0 +1,66 @@
+const en = {
+  common: {
+    home: 'Home',
+    about: 'About',
+    products: 'Products',
+    services: 'Services',
+    blog: 'Blog',
+    team: 'Team',
+    contact: 'Contact',
+    enquire: 'Enquire Now',
+    orderWhatsApp: 'Order via WhatsApp',
+    viewDetails: 'View Details',
+    readMore: 'Read More',
+    backToCatalogue: 'Back to catalogue',
+    backToBlog: 'Back to Blog',
+    installApp: 'Install Nerrylink\'s',
+    addToHome: 'Add to Home Screen',
+    addToHomeDesc: 'Add to home screen for quick access',
+    gotIt: 'Got it',
+    dismiss: 'Dismiss',
+    search: 'Search products...',
+    all: 'All',
+    noResults: 'No products found',
+    resultsFound: '{count} result{count, plural, one {} other {s}} found',
+  },
+  hero: {
+    badge: 'Trusted Tech Store',
+    heading: 'Nigeria\'s #1 Marketplace for Computers & Gadgets',
+    subheading: 'New and refurbished laptops, phones, accessories, and expert tech services. Retail & wholesale nationwide.',
+    browseProducts: 'Browse Products',
+    contactUs: 'Contact Us',
+  },
+  categories: {
+    laptops: 'Laptops & Desktops',
+    mobile: 'Mobile Devices',
+    gadgets: 'Gadgets',
+    bags: 'Bags',
+  },
+  stats: {
+    productsSold: 'Products Sold',
+    happyCustomers: 'Happy Customers',
+    yearsExperience: 'Years Experience',
+    techSupport: 'Resolved Technical Support',
+  },
+  product: {
+    refurbished: 'Certified Refurbished — quality tested',
+    wholesale: 'Wholesale',
+    availableFor: 'Available for',
+  },
+  faq: {
+    heading: 'Frequently Asked Questions',
+    badge: 'FAQ',
+  },
+  blog: {
+    heading: 'Tech Guides & Tips',
+    subheading: 'Expert advice from the Nerrylink team',
+    writtenBy: 'Written by',
+  },
+  footer: {
+    tagline: 'Nigeria\'s Trusted Tech Store',
+    workingHours: 'Mon–Sat · 9:00 AM – 7:30 PM',
+    followUs: 'Follow Us',
+  },
+};
+
+export default en;
