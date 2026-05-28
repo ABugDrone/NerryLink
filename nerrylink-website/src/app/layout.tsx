@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout/Footer';
 import { WhatsAppIntegration } from '@/components/forms/WhatsAppIntegration';
 import { ThemeProvider } from '@/components/ui/ThemeProvider';
 import { PwaInstallPrompt } from '@/components/ui/PwaInstallPrompt';
+import { OrganizationSchema, WebSiteSchema } from '@/components/seo/JsonLd';
 
 export const metadata: Metadata = {
   title: 'Nerrylink\'s Gadget Store — Nigeria\'s Trusted Tech Store',
@@ -58,6 +59,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         `}} />
       </head>
 <body className="antialiased transition-colors duration-300" suppressHydrationWarning>
+        <OrganizationSchema />
+        <WebSiteSchema />
         <ThemeProvider>
           {/* Skip to main content — keyboard / screen-reader accessibility */}
           <a

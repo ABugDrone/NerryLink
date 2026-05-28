@@ -5,6 +5,14 @@ import { ContactSection } from '@/components/sections/ContactSection';
 export const metadata: Metadata = {
   title: "Contact & Book a Service — Nerrylink's Gadget Store",
   description: "Book a service or make an enquiry at Nerrylink's Gadget Store. We respond via WhatsApp — Mon–Sat, 9 AM – 7:30 PM.",
+  openGraph: {
+    title: "Contact & Book a Service — Nerrylink's Gadget Store",
+    description: 'Book a service or enquire via WhatsApp. Mon–Sat, 9 AM – 7:30 PM.',
+    url: 'https://nerrylinks.web.app/contact/',
+    siteName: "Nerrylink's Gadget Store",
+    images: [{ url: '/assets/images/Contact Us.jpeg', width: 1200, height: 630 }],
+    type: 'website',
+  },
 };
 
 export default function ContactPage() {

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { products } from '@/lib/products';
 import { ProductDetail } from '@/components/sections/ProductDetail';
+import { ProductJsonLd } from '@/components/seo/JsonLd';
 import { notFound } from 'next/navigation';
 
 export function generateStaticParams() {
@@ -29,5 +30,15 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   const product = products.find((p) => p.id === id);
   if (!product) notFound();
 
-  return <ProductDetail product={product} />;
+  return (
+    <>
+      <ProductJsonLd
+        name={product.name}
+        description={product.description}
+        image={product.imagePath}
+        url={`/products/${product.id}/`}
+      />
+      <ProductDetail product={product} />
+    </>
+  );
 }

@@ -5,6 +5,14 @@ import { TeamSection } from '@/components/sections/TeamSection';
 export const metadata: Metadata = {
   title: "Our Team — Nerrylink's Gadget Store",
   description: "Meet the passionate and certified team behind Nerrylink's Gadget Store — dedicated to delivering the best tech products and services in Nigeria.",
+  openGraph: {
+    title: "Our Team — Nerrylink's Gadget Store",
+    description: 'Meet the certified team behind Nerrylink — dedicated to quality tech and service in Nigeria.',
+    url: 'https://nerrylinks.web.app/team/',
+    siteName: "Nerrylink's Gadget Store",
+    images: [{ url: '/assets/images/Our team.jpeg', width: 1200, height: 630 }],
+    type: 'website',
+  },
 };
 
 export default function TeamPage() {

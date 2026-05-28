@@ -5,6 +5,14 @@ import { ServiceGrid } from '@/components/sections/ServiceGrid';
 export const metadata: Metadata = {
   title: "Tech Services — Repairs, Upgrades & Wholesale | Nerrylink's Gadget Store",
   description: "Expert tech services including repairs, software installs, hardware upgrades, B2B wholesale, government procurement (B2G), and NGO supply (B2NGO) in Nigeria.",
+  openGraph: {
+    title: "Tech Services — Repairs, Upgrades & Wholesale | Nerrylink's",
+    description: 'Expert tech services: repairs, installs, upgrades, B2B, B2G, and B2NGO supply in Nigeria.',
+    url: 'https://nerrylinks.web.app/services/',
+    siteName: "Nerrylink's Gadget Store",
+    images: [{ url: '/assets/images/Tech Services.jpeg', width: 1200, height: 630 }],
+    type: 'website',
+  },
 };
 
 export default function ServicesPage() {

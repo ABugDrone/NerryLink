@@ -4,6 +4,14 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "About Us — Nerrylink's Gadget Store",
   description: "Learn about Nerrylink's Gadget Store — a CAC-registered Nigerian business serving retail, wholesale, government, and NGO clients with quality tech products and services.",
+  openGraph: {
+    title: "About Us — Nerrylink's Gadget Store",
+    description: 'CAC-registered Nigerian tech business serving retail, wholesale, government, and NGO clients.',
+    url: 'https://nerrylinks.web.app/about/',
+    siteName: "Nerrylink's Gadget Store",
+    images: [{ url: '/assets/images/About US.jpeg', width: 1200, height: 630 }],
+    type: 'website',
+  },
 };
 
 export default function AboutPage() {
