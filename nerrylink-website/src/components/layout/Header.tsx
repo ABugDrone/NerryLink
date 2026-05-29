@@ -11,14 +11,13 @@ function NerryLinkLogo() {
 
   return (
     <Link href="/" className="flex items-center gap-2.5 group" aria-label="Nerrylink's Gadget Store home">
-      {/* Logo SVG from public/logo.svg */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/logo.svg"
         alt="Nerrylink's Gadget Store logo"
-        width={38}
-        height={38}
-        className="flex-shrink-0"
+        width={52}
+        height={52}
+        className="flex-shrink-0 w-[52px] h-[52px]"
         style={{ filter: isLight ? 'none' : 'brightness(1.15) saturate(1.1)' }}
       />
       <div className="flex flex-col leading-none">
