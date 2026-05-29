@@ -107,7 +107,7 @@ export function Hero() {
         </div>
 
         {/* Buttons — centered below the grid */}
-        <motion.div variants={itemVariants} className="flex flex-col xs:flex-row gap-3 justify-center mt-10">
+        <motion.div variants={itemVariants} className="flex flex-col xs:flex-row gap-3 justify-center w-full mt-10">
           <GlassButton href="/products" variant="primary" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full xs:w-auto shadow-lg shadow-violet-500/20">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/>
