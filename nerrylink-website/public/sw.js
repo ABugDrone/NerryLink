@@ -2,8 +2,10 @@ const CACHE_NAME = 'nerrylink-v1';
 const STATIC_ASSETS = [
   '/',
   '/manifest.json',
-  '/favicon.svg',
-  '/logo.svg',
+  '/favicon.ico',
+  '/logo.png',
+  '/icons/icon-192.png',
+  '/icons/icon-512.png',
 ];
 
 self.addEventListener('install', (event) => {

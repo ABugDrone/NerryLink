@@ -49,7 +49,7 @@ export function Footer() {
           <div className="md:col-span-4">
             <div className="flex items-center gap-2.5 mb-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.svg" alt="" width={32} height={32} aria-hidden="true" />
+              <img src="/logo.png" alt="" width={32} height={32} aria-hidden="true" />
               <span className={`text-xl font-black ${
                 isLight
                   ? 'bg-gradient-to-r from-[#6B21A8] to-[#DC2626] bg-clip-text text-transparent'

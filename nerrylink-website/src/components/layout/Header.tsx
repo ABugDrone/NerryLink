@@ -13,7 +13,7 @@ function NerryLinkLogo() {
     <Link href="/" className="flex items-center gap-2.5 group" aria-label="Nerrylink's Gadget Store home">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/logo.svg"
+        src="/logo.png"
         alt="Nerrylink's Gadget Store logo"
         width={52}
         height={52}

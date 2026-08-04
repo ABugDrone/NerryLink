@@ -92,7 +92,7 @@ export function PwaInstallPrompt() {
           aria-label="Install app"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="Nerrylink" className="w-8 h-8" />
+          <img src="/logo.png" alt="Nerrylink" className="w-8 h-8" />
         </button>
       )}
 
@@ -102,7 +102,7 @@ export function PwaInstallPrompt() {
           <div className="glass-elevated p-4 rounded-2xl shadow-2xl">
             <div className="flex items-start gap-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.svg" alt="Nerrylink" className="flex-shrink-0 w-11 h-11 rounded-xl" />
+              <img src="/logo.png" alt="Nerrylink" className="flex-shrink-0 w-11 h-11 rounded-xl" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-bold text-[var(--text-primary)]">Install Nerrylink&apos;s</p>
                 <p className="text-xs text-[var(--text-muted)] mt-1">Add to home screen for quick access</p>
@@ -134,7 +134,7 @@ export function PwaInstallPrompt() {
           <div className={`relative z-10 p-6 rounded-3xl max-w-sm w-full mb-8 ${isLight ? 'bg-white shadow-2xl' : 'glass-elevated'}`}>
             <div className="text-center mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.svg" alt="Nerrylink" className="mx-auto w-16 h-16 rounded-2xl mb-3" />
+              <img src="/logo.png" alt="Nerrylink" className="mx-auto w-16 h-16 rounded-2xl mb-3" />
               <p className="text-lg font-black text-[var(--text-primary)]">Add to Home Screen</p>
               <p className={`text-sm mt-2 leading-relaxed ${isLight ? 'text-gray-500' : 'text-[var(--text-secondary)]'}`}>
                 Tap the <strong className={isLight ? 'text-[#6B21A8]' : 'text-violet-400'}>Share</strong> button in your browser, then tap <strong className={isLight ? 'text-[#6B21A8]' : 'text-violet-400'}>&ldquo;Add to Home Screen&rdquo;</strong>
@@ -161,7 +161,7 @@ export function PwaInstallPrompt() {
           <div className="glass-elevated p-4 rounded-2xl shadow-2xl">
             <div className="flex items-start gap-3">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logo.svg" alt="Nerrylink" className="flex-shrink-0 w-11 h-11 rounded-xl" />
+              <img src="/logo.png" alt="Nerrylink" className="flex-shrink-0 w-11 h-11 rounded-xl" />
               <div className="flex-1 min-w-0">
                 <p className="text-sm font-bold text-[var(--text-primary)]">Install Nerrylink&apos;s</p>
                 <p className="text-xs text-[var(--text-muted)] mt-1">Add to home screen for quick access</p>

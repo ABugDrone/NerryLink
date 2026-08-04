@@ -14,7 +14,7 @@ export function OrganizationSchema() {
     name: "Nerrylink's Gadget Store",
     alternateName: "Nerrylink's Global Services",
     url: 'https://nerrylinks.web.app',
-    logo: 'https://nerrylinks.web.app/logo.svg',
+    logo: 'https://nerrylinks.web.app/logo.png',
     image: 'https://nerrylinks.web.app/assets/images/Home%20Hero%20section.jpeg',
     description: 'Shop laptops, phones, bags and book expert tech services at Nerrylink\'s Gadget Store, Nigeria.',
     email: 'ekpajerrimiah@gmail.com',
