@@ -43,7 +43,7 @@ function AnimatedCounter({ value, suffix = '', prefix = '' }: { value: number; s
   }, [isInView, value]);
 
   return (
-    <span ref={ref} className="stat-number block text-xl xs:text-2xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-violet-500 truncate">
+    <span ref={ref} className="stat-number block text-xl xs:text-2xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500 truncate">
       {prefix}
       {displayValue.toLocaleString()}
       {suffix}
@@ -73,7 +73,7 @@ export function StatsBar() {
   };
 
   return (
-    <section className="py-16 sm:py-24 w-full bg-gradient-to-b from-transparent via-purple-500/5 to-transparent">
+    <section className="py-16 sm:py-24 w-full bg-gradient-to-b from-transparent via-blue-500/5 to-transparent">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8"

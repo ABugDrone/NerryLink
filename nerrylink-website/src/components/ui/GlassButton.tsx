@@ -22,8 +22,8 @@ const darkStyles: Record<string, string> = {
 
 // Light mode styles (solid, high contrast)
 const lightStyles: Record<string, string> = {
-  primary:  'bg-[#6B21A8] border-[#6B21A8] text-white hover:bg-[#7C3AED] hover:border-[#7C3AED] shadow-md shadow-purple-300/40',
-  secondary:'bg-white border-[#6B21A8]/40 text-[#6B21A8] hover:bg-purple-50 shadow-sm',
+  primary:  'bg-[#1E40AF] border-[#1E40AF] text-white hover:bg-[#2563EB] hover:border-[#2563EB] shadow-md shadow-blue-300/40',
+  secondary:'bg-white border-[#1E40AF]/40 text-[#1E40AF] hover:bg-blue-50 shadow-sm',
   whatsapp: 'bg-[#25D366] border-[#25D366] text-white hover:bg-[#1ebe5d] shadow-md shadow-green-300/40',
 };
 
@@ -44,7 +44,7 @@ export function GlassButton({
   const focusRing =
     variant === 'whatsapp'
       ? 'focus-visible:ring-[#25D366]'
-      : 'focus-visible:ring-[#7C3AED]';
+      : 'focus-visible:ring-[#2563EB]';
 
   const base = `inline-flex items-center justify-center gap-2 px-6 py-3 rounded-2xl border backdrop-blur-md font-semibold text-sm transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 ${focusRing} ${variantStyle} ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'} ${className}`;
 

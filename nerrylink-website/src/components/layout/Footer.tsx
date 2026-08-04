@@ -21,17 +21,17 @@ export function Footer() {
   const { theme } = useTheme();
   const isLight = theme === 'light';
 
-  const textMuted = isLight ? 'text-[#4a2080]/60' : 'text-white/50';
-  const textFaint = isLight ? 'text-[#4a2080]/40' : 'text-white/30';
-  const border = isLight ? 'border-purple-200/50' : 'border-white/10';
-  const heading = isLight ? 'text-[#6B21A8]' : 'text-white';
+  const textMuted = isLight ? 'text-[#1E3A8A]/60' : 'text-white/50';
+  const textFaint = isLight ? 'text-[#1E3A8A]/40' : 'text-white/30';
+  const border = isLight ? 'border-blue-200/50' : 'border-white/10';
+  const heading = isLight ? 'text-[#1E40AF]' : 'text-white';
   const badge = isLight
-    ? 'bg-purple-50 border-purple-200/80 text-[#6B21A8]'
+    ? 'bg-blue-50 border-blue-200/80 text-[#1E40AF]'
     : 'bg-white/5 border-white/10 text-white/40';
 
   const socialBtnBase = `flex items-center justify-center w-9 h-9 rounded-xl border transition-all duration-200`;
   const socialBtnDark = `${socialBtnBase} bg-white/6 border-white/10 hover:bg-white/12 hover:border-white/20`;
-  const socialBtnLight = `${socialBtnBase} bg-white/80 border-purple-200/60 hover:border-purple-400/50 hover:bg-purple-50`;
+  const socialBtnLight = `${socialBtnBase} bg-white/80 border-blue-200/60 hover:border-blue-400/50 hover:bg-blue-50`;
 
   return (
     <footer className={`border-t ${border} mt-20`} style={{
@@ -40,7 +40,7 @@ export function Footer() {
       WebkitBackdropFilter: 'blur(16px)',
     }}>
       {/* Top accent line */}
-      <div className="h-[2px] bg-gradient-to-r from-transparent via-[#7C3AED]/50 to-transparent" aria-hidden="true" />
+      <div className="h-[2px] bg-gradient-to-r from-transparent via-[#2563EB]/50 to-transparent" aria-hidden="true" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6">
@@ -52,8 +52,8 @@ export function Footer() {
               <img src="/logo.png" alt="" width={32} height={32} aria-hidden="true" />
               <span className={`text-xl font-black ${
                 isLight
-                  ? 'bg-gradient-to-r from-[#6B21A8] to-[#DC2626] bg-clip-text text-transparent'
-                  : 'bg-gradient-to-r from-violet-400 to-purple-300 bg-clip-text text-transparent'
+                  ? 'bg-gradient-to-r from-[#1E40AF] to-[#DC2626] bg-clip-text text-transparent'
+                  : 'bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent'
               }`}>
                 Nerrylink&apos;s
               </span>
@@ -85,7 +85,7 @@ export function Footer() {
                 </svg>
               </a>
               <a href="tel:+2348166490440" aria-label="Call us"
-                className={isLight ? `${socialBtnLight} text-[#6B21A8]` : `${socialBtnDark} text-violet-400`}>
+                className={isLight ? `${socialBtnLight} text-[#1E40AF]` : `${socialBtnDark} text-blue-400`}>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/>
                 </svg>
@@ -117,7 +117,7 @@ export function Footer() {
               </a>
               <a href="https://web.facebook.com/profile.php?id=100067730592515" target="_blank" rel="noopener noreferrer"
                 className={`flex items-center gap-2.5 transition-colors text-sm ${
-                  isLight ? 'text-[#6B21A8]/70 hover:text-[#6B21A8]' : 'text-sky-400/80 hover:text-sky-300'
+                  isLight ? 'text-[#1E40AF]/70 hover:text-[#1E40AF]' : 'text-sky-400/80 hover:text-sky-300'
                 }`}>
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="flex-shrink-0">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
@@ -132,14 +132,14 @@ export function Footer() {
             <h3 className={`font-bold mb-4 text-xs uppercase tracking-widest ${heading}`}>Hours</h3>
             <div className={`flex items-start gap-3 text-sm ${textMuted}`}>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
-                className={`mt-0.5 flex-shrink-0 ${isLight ? 'text-[#6B21A8]' : 'text-violet-400'}`} aria-hidden="true">
+                className={`mt-0.5 flex-shrink-0 ${isLight ? 'text-[#1E40AF]' : 'text-blue-400'}`} aria-hidden="true">
                 <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
               </svg>
               <div>
                 <p className={`font-semibold text-sm mb-0.5 ${isLight ? 'text-[#1a0533]' : 'text-white'}`}>
                   Monday – Saturday
                 </p>
-                <p className={`text-base font-bold ${isLight ? 'text-[#6B21A8]' : 'text-violet-300'}`}>
+                <p className={`text-base font-bold ${isLight ? 'text-[#1E40AF]' : 'text-blue-300'}`}>
                   9:00 AM – 7:30 PM
                 </p>
                 <p className="text-red-500/80 text-xs mt-1.5 flex items-center gap-1">
@@ -158,7 +158,7 @@ export function Footer() {
               {navLinks.map(([href, label]) => (
                 <li key={href}>
                   <Link href={href} className={`text-xs transition-colors ${
-                    isLight ? 'text-[#4a2080]/50 hover:text-[#6B21A8]' : 'text-white/40 hover:text-white/80'
+                    isLight ? 'text-[#1E3A8A]/50 hover:text-[#1E40AF]' : 'text-white/40 hover:text-white/80'
                   }`}>
                     {label}
                   </Link>

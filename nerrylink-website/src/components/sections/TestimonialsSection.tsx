@@ -19,7 +19,7 @@ const testimonials: Testimonial[] = [
     product: 'Lenovo ThinkPad T450',
     gender: 'male',
     initial: 'A',
-    color: '#7C3AED',
+    color: '#2563EB',
     text: 'Got my Lenovo T450 from NerryLink and it has been a beast. Fast, reliable, and the battery still holds strong. Best purchase I made this year — and the price was unbeatable.',
   },
   {
@@ -242,7 +242,7 @@ export function TestimonialsSection() {
                 setVisible(false);
                 setTimeout(() => { setCurrent(i); setVisible(true); }, FADE_DURATION);
               }}
-              className="rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7C3AED]"
+              className="rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB]"
               style={{
                 width: i === current ? '24px' : '8px',
                 height: '8px',

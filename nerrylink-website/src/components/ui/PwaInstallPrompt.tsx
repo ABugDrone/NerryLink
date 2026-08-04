@@ -88,7 +88,7 @@ export function PwaInstallPrompt() {
       {!showBanner && !dismissed && (
         <button
           onClick={handleInstallClick}
-          className="fixed bottom-20 right-4 z-[9998] w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg shadow-violet-500/20 flex items-center justify-center hover:scale-110 transition-all duration-300 animate-slide-up overflow-hidden"
+          className="fixed bottom-20 right-4 z-[9998] w-12 h-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg shadow-blue-500/20 flex items-center justify-center hover:scale-110 transition-all duration-300 animate-slide-up overflow-hidden"
           aria-label="Install app"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -110,7 +110,7 @@ export function PwaInstallPrompt() {
                 <div className="flex gap-2 mt-3">
                   <button
                     onClick={handleInstall}
-                    className="flex-1 px-3 py-1.5 text-xs font-bold rounded-lg bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700 transition-all"
+                    className="flex-1 px-3 py-1.5 text-xs font-bold rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 transition-all"
                   >
                     Install
                   </button>
@@ -137,17 +137,17 @@ export function PwaInstallPrompt() {
               <img src="/logo.png" alt="Nerrylink" className="mx-auto w-16 h-16 rounded-2xl mb-3" />
               <p className="text-lg font-black text-[var(--text-primary)]">Add to Home Screen</p>
               <p className={`text-sm mt-2 leading-relaxed ${isLight ? 'text-gray-500' : 'text-[var(--text-secondary)]'}`}>
-                Tap the <strong className={isLight ? 'text-[#6B21A8]' : 'text-violet-400'}>Share</strong> button in your browser, then tap <strong className={isLight ? 'text-[#6B21A8]' : 'text-violet-400'}>&ldquo;Add to Home Screen&rdquo;</strong>
+                Tap the <strong className={isLight ? 'text-[#1E40AF]' : 'text-blue-400'}>Share</strong> button in your browser, then tap <strong className={isLight ? 'text-[#1E40AF]' : 'text-blue-400'}>&ldquo;Add to Home Screen&rdquo;</strong>
               </p>
             </div>
             <div className="flex justify-center mb-4">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke={isLight ? '#6B21A8' : '#7C3AED'} strokeWidth="1.5" className="animate-bounce">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke={isLight ? '#1E40AF' : '#2563EB'} strokeWidth="1.5" className="animate-bounce">
                 <path d="M12 5v10M7 10l5 5 5-5" />
               </svg>
             </div>
             <button
               onClick={() => { setShowIosTip(false); setDismissed(true); }}
-              className="w-full py-2.5 text-sm font-bold rounded-xl bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700 transition-all"
+              className="w-full py-2.5 text-sm font-bold rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 transition-all"
             >
               Got it
             </button>
@@ -168,7 +168,7 @@ export function PwaInstallPrompt() {
                 <div className="flex gap-2 mt-3">
                   <button
                     onClick={() => setShowIosTip(true)}
-                    className="flex-1 px-3 py-1.5 text-xs font-bold rounded-lg bg-gradient-to-r from-violet-500 to-purple-600 text-white hover:from-violet-600 hover:to-purple-700 transition-all"
+                    className="flex-1 px-3 py-1.5 text-xs font-bold rounded-lg bg-gradient-to-r from-blue-500 to-blue-600 text-white hover:from-blue-600 hover:to-blue-700 transition-all"
                   >
                     How to Install
                   </button>

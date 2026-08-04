@@ -32,10 +32,10 @@ export function Navigation() {
 
   const linkBase = 'px-3 py-2 rounded-xl text-sm font-medium transition-all duration-150';
   const linkActive = isLight
-    ? `${linkBase} bg-purple-100 text-[#6B21A8] font-semibold`
+    ? `${linkBase} bg-blue-100 text-[#1E40AF] font-semibold`
     : `${linkBase} bg-white/15 text-white font-semibold`;
   const linkInactive = isLight
-    ? `${linkBase} text-[#4a2080]/70 hover:text-[#6B21A8] hover:bg-purple-50`
+    ? `${linkBase} text-[#1E3A8A]/70 hover:text-[#1E40AF] hover:bg-blue-50`
     : `${linkBase} text-white/70 hover:text-white hover:bg-white/10`;
 
   const overlayVariants = {
@@ -83,8 +83,8 @@ export function Navigation() {
       {/* Mobile hamburger button */}
       <button
         onClick={() => setOpen(!open)}
-        className={`md:hidden p-2 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7C3AED] relative z-[9999] ${
-          isLight ? 'text-[#6B21A8]/80 hover:bg-purple-50' : 'text-white/80 hover:text-white hover:bg-white/10'
+        className={`md:hidden p-2 rounded-xl transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] relative z-[9999] ${
+          isLight ? 'text-[#1E40AF]/80 hover:bg-blue-50' : 'text-white/80 hover:text-white hover:bg-white/10'
         }`}
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
@@ -129,21 +129,21 @@ export function Navigation() {
               className="fixed top-0 right-0 bottom-0 z-[9999] w-[85vw] max-w-sm flex flex-col md:hidden"
               style={{
                 background: isLight
-                  ? 'rgb(248,245,255)'
+                  ? 'rgb(240, 246, 255)'
                   : 'rgb(15,13,24)',
                 borderLeft: isLight
-                  ? '1px solid rgba(107,33,168,0.15)'
+                  ? '1px solid rgba(30, 64, 175,0.15)'
                   : '1px solid rgba(255,255,255,0.08)',
               }}
             >
               {/* Header */}
               <div className={`flex items-center justify-between px-5 py-5 border-b ${
-                isLight ? 'border-purple-200/50' : 'border-white/10'
+                isLight ? 'border-blue-200/50' : 'border-white/10'
               }`}>
                 <span className={`text-xl font-black ${
                   isLight
-                    ? 'bg-gradient-to-r from-[#6B21A8] to-[#DC2626] bg-clip-text text-transparent'
-                    : 'bg-gradient-to-r from-violet-400 to-purple-300 bg-clip-text text-transparent'
+                    ? 'bg-gradient-to-r from-[#1E40AF] to-[#DC2626] bg-clip-text text-transparent'
+                    : 'bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent'
                 }`}>
                   NerryLink
                 </span>
@@ -151,7 +151,7 @@ export function Navigation() {
                   onClick={() => setOpen(false)}
                   className={`p-2 rounded-xl transition-colors ${
                     isLight
-                      ? 'text-[#6B21A8]/70 hover:text-[#6B21A8] hover:bg-purple-50'
+                      ? 'text-[#1E40AF]/70 hover:text-[#1E40AF] hover:bg-blue-50'
                       : 'text-white/70 hover:text-white hover:bg-white/10'
                   }`}
                   aria-label="Close menu"
@@ -178,16 +178,16 @@ export function Navigation() {
                       className={`flex items-center justify-between px-4 py-3.5 rounded-2xl text-base font-semibold transition-all duration-150 ${
                         pathname === href
                           ? isLight
-                            ? 'bg-gradient-to-r from-purple-100 to-pink-50 text-[#6B21A8] border border-purple-200/80'
-                            : 'bg-gradient-to-r from-violet-500/20 to-purple-500/10 text-violet-300 border border-violet-500/30'
+                            ? 'bg-gradient-to-r from-blue-100 to-pink-50 text-[#1E40AF] border border-blue-200/80'
+                            : 'bg-gradient-to-r from-blue-500/20 to-blue-500/10 text-blue-300 border border-blue-500/30'
                           : isLight
-                            ? 'text-[#4a2080]/80 hover:text-[#6B21A8] hover:bg-purple-50'
+                            ? 'text-[#1E3A8A]/80 hover:text-[#1E40AF] hover:bg-blue-50'
                             : 'text-white/80 hover:text-white hover:bg-white/8'
                       }`}
                     >
                       {label}
                       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"
-                        className={isLight ? 'text-purple-300' : 'text-white/25'} aria-hidden="true">
+                        className={isLight ? 'text-blue-300' : 'text-white/25'} aria-hidden="true">
                         <path d="M9 18l6-6-6-6"/>
                       </svg>
                     </Link>
@@ -200,7 +200,7 @@ export function Navigation() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0, transition: { delay: 0.35, duration: 0.3 } }}
                 className={`px-5 py-5 border-t flex flex-col gap-3 ${
-                  isLight ? 'border-purple-200/50' : 'border-white/10'
+                  isLight ? 'border-blue-200/50' : 'border-white/10'
                 }`}
               >
                 <a href="https://wa.me/2348166490440" target="_blank" rel="noopener noreferrer"
@@ -210,13 +210,13 @@ export function Navigation() {
                   </svg>
                   +234 816 649 0440
                 </a>
-                <p className={`text-xs ${isLight ? 'text-purple-400/60' : 'text-white/30'}`}>
+                <p className={`text-xs ${isLight ? 'text-blue-400/60' : 'text-white/30'}`}>
                   Mon–Sat · 9:00 AM – 7:30 PM
                 </p>
 
                 {/* Socials */}
-                <div className={`pt-3 border-t ${isLight ? 'border-purple-200/40' : 'border-white/10'}`}>
-                  <p className={`text-xs font-semibold uppercase tracking-widest mb-3 ${isLight ? 'text-[#6B21A8]/60' : 'text-white/30'}`}>
+                <div className={`pt-3 border-t ${isLight ? 'border-blue-200/40' : 'border-white/10'}`}>
+                  <p className={`text-xs font-semibold uppercase tracking-widest mb-3 ${isLight ? 'text-[#1E40AF]/60' : 'text-white/30'}`}>
                     Follow Us
                   </p>
                   <div className="flex items-center gap-2">
@@ -253,8 +253,8 @@ export function Navigation() {
                     <a href="tel:+2348166490440" aria-label="Call NerryLink"
                       className={`flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-150 ${
                         isLight
-                          ? 'bg-purple-50 text-[#6B21A8] hover:bg-purple-100 border border-purple-200'
-                          : 'bg-white/8 text-violet-400 hover:bg-white/15 border border-white/10'
+                          ? 'bg-blue-50 text-[#1E40AF] hover:bg-blue-100 border border-blue-200'
+                          : 'bg-white/8 text-blue-400 hover:bg-white/15 border border-white/10'
                       }`}>
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/>

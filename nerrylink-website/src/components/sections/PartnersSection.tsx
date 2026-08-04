@@ -5,8 +5,8 @@ const partners = [
   {
     name: 'MovingTech',
     abbr: 'MT',
-    color: '#7C3AED',
-    bg: 'rgba(124,58,237,0.15)',
+    color: '#2563EB',
+    bg: 'rgba(37, 99, 235,0.15)',
     tagline: 'Mobility Solutions',
   },
   {
@@ -41,7 +41,7 @@ const partners = [
     name: 'Bentouch Africa',
     abbr: 'BA',
     color: '#8B5CF6',
-    bg: 'rgba(139,92,246,0.15)',
+    bg: 'rgba(59, 130, 246,0.15)',
     tagline: 'Digital Innovation',
   },
   {
@@ -100,7 +100,7 @@ export function PartnersSection() {
     <section className="py-16 overflow-hidden" aria-labelledby="partners-heading">
       <div className="text-center mb-10 px-4">
         <span className={`glass px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest ${
-          isLight ? 'text-[#6B21A8]' : 'text-violet-300'
+          isLight ? 'text-[#1E40AF]' : 'text-blue-300'
         }`}>
           Our Partners
         </span>
@@ -121,12 +121,12 @@ export function PartnersSection() {
         {/* Fade edges */}
         <div className={`absolute left-0 top-0 bottom-0 w-16 z-10 pointer-events-none ${
           isLight
-            ? 'bg-gradient-to-r from-[#f8f5ff] to-transparent'
+            ? 'bg-gradient-to-r from-[#F0F6FF] to-transparent'
             : 'bg-gradient-to-r from-[#05050f] to-transparent'
         }`} aria-hidden="true" />
         <div className={`absolute right-0 top-0 bottom-0 w-16 z-10 pointer-events-none ${
           isLight
-            ? 'bg-gradient-to-l from-[#f8f5ff] to-transparent'
+            ? 'bg-gradient-to-l from-[#F0F6FF] to-transparent'
             : 'bg-gradient-to-l from-[#05050f] to-transparent'
         }`} aria-hidden="true" />
 

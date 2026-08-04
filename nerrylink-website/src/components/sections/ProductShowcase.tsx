@@ -128,7 +128,7 @@ export function ProductShowcase() {
               initial={{ opacity: 0, y: isMobile ? 16 : 0, x: isMobile ? 0 : -10 }}
               animate={{ opacity: 1, y: 0, x: 0 }}
               transition={{ delay: isMobile ? i * 0.08 : i * 0.04, duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-              className={`flex-shrink-0 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7C3AED] ${
+              className={`flex-shrink-0 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] ${
                 activeCategory === id
                   ? 'tab-active bg-sky-500/30 border border-sky-400/50 text-sky-200 shadow-lg shadow-sky-500/10'
                   : 'glass text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
@@ -142,7 +142,7 @@ export function ProductShowcase() {
         {isMobile && (
           <div className="mx-4 mt-2 h-[3px] rounded-full overflow-hidden sm:hidden bg-white/10">
             <motion.div
-              className="h-full rounded-full bg-gradient-to-r from-sky-400 to-violet-500"
+              className="h-full rounded-full bg-gradient-to-r from-sky-400 to-blue-500"
               style={{ width: `${scrollProgress * 100}%` }}
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
             />
@@ -222,7 +222,7 @@ export function ProductShowcase() {
                 exit="exit"
               >
                 <GlassCard
-                  className="overflow-hidden cursor-pointer group hover:border-purple-400/50 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300 product-card h-full"
+                  className="overflow-hidden cursor-pointer group hover:border-blue-400/50 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 product-card h-full"
                   onClick={() => window.open(`https://wa.me/${PHONE_PRIMARY}`, '_blank', 'noopener,noreferrer')}
                 >
                   <div className="product-card-media relative h-44 overflow-hidden rounded-t-2xl">

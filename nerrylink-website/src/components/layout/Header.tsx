@@ -23,8 +23,8 @@ function NerryLinkLogo() {
       <div className="flex flex-col leading-none">
         <span className={`text-lg font-black tracking-tight ${
           isLight
-            ? 'text-[#6B21A8]'
-            : 'bg-gradient-to-r from-violet-400 to-purple-300 bg-clip-text text-transparent'
+            ? 'text-[#1E40AF]'
+            : 'bg-gradient-to-r from-blue-400 to-blue-300 bg-clip-text text-transparent'
         }`}>
           Nerrylink's
         </span>
@@ -51,7 +51,7 @@ export function Header() {
 
   const headerClass = scrolled
     ? isLight
-      ? 'bg-white/80 backdrop-blur-xl border-b border-purple-200/50 shadow-lg shadow-purple-100/30'
+      ? 'bg-white/80 backdrop-blur-xl border-b border-blue-200/50 shadow-lg shadow-blue-100/30'
       : 'glass border-b border-white/10 shadow-lg'
     : 'bg-transparent';
 

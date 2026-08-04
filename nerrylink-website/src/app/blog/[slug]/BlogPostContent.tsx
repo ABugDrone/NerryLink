@@ -35,7 +35,7 @@ function renderContent(content: string) {
     return <p key={i} className="text-[var(--text-secondary)] text-sm leading-relaxed mt-4" dangerouslySetInnerHTML={{
       __html: trimmed
         .replace(/\*\*(.+?)\*\*/g, '<strong class="text-[var(--text-primary)] font-semibold">$1</strong>')
-        .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-violet-400 hover:text-violet-300 underline font-semibold">$1</a>'),
+        .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" class="text-blue-400 hover:text-blue-300 underline font-semibold">$1</a>'),
     }} />;
   }).filter(Boolean);
 }
@@ -56,7 +56,7 @@ export function BlogPostContent({ post }: { post: BlogPost }) {
         </p>
         <a
           href="/blog/"
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-violet-400 hover:text-violet-300 transition-colors"
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-400 hover:text-blue-300 transition-colors"
         >
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
           Back to Blog

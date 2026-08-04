@@ -8,7 +8,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggle}
-      className="theme-toggle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#7C3AED]"
+      className="theme-toggle focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB]"
       aria-label={isLight ? 'Switch to dark mode' : 'Switch to light mode'}
       title={isLight ? 'Dark mode' : 'Light mode'}
     >

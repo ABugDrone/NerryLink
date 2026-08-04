@@ -121,7 +121,7 @@ export default function AboutPage() {
         {/* Vision, Mission & Core Values */}
         <div className="mb-12 animate-fade-up">
           <div className="text-center mb-8">
-            <span className="glass px-4 py-1.5 rounded-full text-xs font-semibold text-violet-300 uppercase tracking-widest">What Drives Us</span>
+            <span className="glass px-4 py-1.5 rounded-full text-xs font-semibold text-blue-300 uppercase tracking-widest">What Drives Us</span>
             <h2 className="mt-4 text-2xl sm:text-3xl font-black text-white">Vision, Mission &amp; Values</h2>
           </div>
 
@@ -129,11 +129,11 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-6">
 
             {/* Vision */}
-            <div className="glass p-6 rounded-2xl border border-violet-500/20 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-violet-500/10 rounded-full -translate-y-8 translate-x-8 blur-2xl" aria-hidden="true" />
+            <div className="glass p-6 rounded-2xl border border-blue-500/20 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-blue-500/10 rounded-full -translate-y-8 translate-x-8 blur-2xl" aria-hidden="true" />
               <div className="flex items-center gap-3 mb-3">
-                <div className="w-10 h-10 rounded-xl bg-violet-500/20 flex items-center justify-center flex-shrink-0">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-violet-300" aria-hidden="true">
+                <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-blue-300" aria-hidden="true">
                     <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
                     <path d="M2 12h2M20 12h2M12 2v2M12 20v2"/>
                   </svg>
@@ -211,9 +211,9 @@ export default function AboutPage() {
                   ),
                   title: 'Excellence',
                   desc: 'We hold ourselves to the highest standard in product quality, service delivery, and technical expertise.',
-                  color: 'text-violet-300',
-                  bg: 'bg-violet-500/15',
-                  border: 'border-violet-500/20',
+                  color: 'text-blue-300',
+                  bg: 'bg-blue-500/15',
+                  border: 'border-blue-500/20',
                 },
                 {
                   icon: (

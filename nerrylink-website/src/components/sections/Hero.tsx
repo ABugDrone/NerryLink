@@ -23,12 +23,12 @@ export function Hero() {
         style={{ backgroundImage: "url('/assets/images/Home Hero section.jpeg')" }} aria-hidden="true" />
       <div className={`absolute inset-0 ${
         isLight
-          ? 'bg-gradient-to-br from-white/95 via-purple-50/92 to-red-50/88'
+          ? 'bg-gradient-to-br from-white/95 via-blue-50/92 to-red-50/88'
           : 'bg-gradient-to-br from-slate-900/90 via-slate-900/70 to-slate-950/80'
       }`} aria-hidden="true" />
 
       {/* Ambient glow blobs */}
-      <div className="hidden sm:block absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-violet-600/8 rounded-full blur-[80px]" aria-hidden="true" />
+      <div className="hidden sm:block absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-blue-600/8 rounded-full blur-[80px]" aria-hidden="true" />
       <div className="hidden sm:block absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-red-500/6 rounded-full blur-[80px]" aria-hidden="true" />
 
       <motion.div
@@ -41,7 +41,7 @@ export function Hero() {
           {/* Left: Branding */}
           <div className="space-y-6">
             <motion.span variants={itemVariants} className={`inline-block glass px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-widest ${
-              isLight ? 'text-[#6B21A8]' : 'text-violet-300'
+              isLight ? 'text-[#1E40AF]' : 'text-blue-300'
             }`}>
               CAC Registered Business &middot; NerryLink&apos;s Global Services
             </motion.span>
@@ -53,7 +53,7 @@ export function Hero() {
             </motion.h1>
 
             <motion.p variants={itemVariants} className={`text-base sm:text-lg leading-relaxed ${
-              isLight ? 'text-[#4a2080]/80' : 'text-white/65'
+              isLight ? 'text-[#1E3A8A]/80' : 'text-white/65'
             }`}>
               Laptops &middot; Phones &middot; Bags &middot; Expert Tech Services &mdash; retail &amp; wholesale.
               Serving individuals, businesses, government agencies, and NGOs across Nigeria.
@@ -92,7 +92,7 @@ export function Hero() {
 
         {/* Buttons — centered below the grid */}
         <motion.div variants={itemVariants} className="flex flex-col xs:flex-row gap-3 justify-center w-full mt-10">
-          <GlassButton href="/products" variant="primary" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full xs:w-auto shadow-lg shadow-violet-500/20">
+          <GlassButton href="/products" variant="primary" className="text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-4 w-full xs:w-auto shadow-lg shadow-blue-500/20">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
               <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/>
               <path d="M16 10a4 4 0 0 1-8 0"/>

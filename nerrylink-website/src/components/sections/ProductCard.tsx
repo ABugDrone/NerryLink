@@ -105,7 +105,7 @@ export function ProductCard({
             </span>
           )}
           {product.isWholesale && (
-            <span className="absolute top-2 right-2 bg-purple-500/80 text-white text-xs font-bold px-2 py-0.5 rounded-full">
+            <span className="absolute top-2 right-2 bg-blue-500/80 text-white text-xs font-bold px-2 py-0.5 rounded-full">
               Wholesale
             </span>
           )}

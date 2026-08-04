@@ -33,8 +33,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="DroneBug Technologies and Services" />
-        <meta name="theme-color" content="#7C3AED" media="(prefers-color-scheme: dark)" />
-        <meta name="theme-color" content="#6B21A8" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#2563EB" media="(prefers-color-scheme: dark)" />
+        <meta name="theme-color" content="#1E40AF" media="(prefers-color-scheme: light)" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="Nerrylink" />
@@ -68,7 +68,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {/* Skip to main content — keyboard / screen-reader accessibility */}
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:rounded-xl focus:bg-[#7C3AED] focus:text-white focus:font-semibold focus:text-sm focus:shadow-lg"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:rounded-xl focus:bg-[#2563EB] focus:text-white focus:font-semibold focus:text-sm focus:shadow-lg"
           >
             Skip to main content
           </a>

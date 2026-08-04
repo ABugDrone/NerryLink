@@ -34,13 +34,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   return (
     <div>
       <section className="relative h-48 sm:h-64 flex items-end overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-violet-900 via-slate-950 to-indigo-950" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-slate-950 to-blue-950" />
         <div className="relative z-10 px-6 pb-8 max-w-3xl mx-auto w-full">
           <a href="/blog/" className="inline-flex items-center gap-1 text-xs text-white/50 hover:text-white/80 transition-colors mb-3">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
             Back to Blog
           </a>
-          <span className="text-[10px] font-bold uppercase tracking-widest bg-violet-500/60 text-white px-2 py-0.5 rounded-full mb-2 inline-block">{post.category}</span>
+          <span className="text-[10px] font-bold uppercase tracking-widest bg-blue-500/60 text-white px-2 py-0.5 rounded-full mb-2 inline-block">{post.category}</span>
           <h1 className="text-2xl sm:text-3xl font-black text-white leading-tight">{post.title}</h1>
           <div className="flex items-center gap-2 text-xs text-white/50 mt-2">
             <span>{post.date}</span>

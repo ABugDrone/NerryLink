@@ -36,7 +36,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Image gallery */}
         <div>
-          <div className={`relative w-full aspect-[4/3] rounded-3xl overflow-hidden mb-3 ${isLight ? 'bg-purple-50' : 'glass-elevated'}`}>
+          <div className={`relative w-full aspect-[4/3] rounded-3xl overflow-hidden mb-3 ${isLight ? 'bg-blue-50' : 'glass-elevated'}`}>
             {images[activeIndex]?.startsWith('https') ? (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -91,7 +91,7 @@ export function ProductDetail({ product }: ProductDetailProps) {
                 </span>
               )}
               {product.isWholesale && (
-                <span className="bg-purple-500/10 border border-purple-500/20 text-purple-400 text-xs font-bold px-3 py-1 rounded-full">
+                <span className="bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold px-3 py-1 rounded-full">
                   Wholesale Available
                 </span>
               )}

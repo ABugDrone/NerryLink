@@ -23,7 +23,7 @@ const iconMap: Record<string, React.ReactNode> = {
 const categoryConfig = {
   technical: { label: 'Technical Services', color: 'sky', badge: 'bg-sky-500/20 text-sky-300 border-sky-500/30', hoverBorder: 'hover:border-sky-400/50', glow: 'hover:shadow-sky-500/10' },
   support: { label: 'Support Services', color: 'emerald', badge: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30', hoverBorder: 'hover:border-emerald-400/50', glow: 'hover:shadow-emerald-500/10' },
-  wholesale: { label: 'Wholesale & Enterprise', color: 'purple', badge: 'bg-purple-500/20 text-purple-300 border-purple-500/30', hoverBorder: 'hover:border-purple-400/50', glow: 'hover:shadow-purple-500/10' },
+  wholesale: { label: 'Wholesale & Enterprise', color: 'blue', badge: 'bg-blue-500/20 text-blue-300 border-blue-500/30', hoverBorder: 'hover:border-blue-400/50', glow: 'hover:shadow-blue-500/10' },
 };
 
 const clientTypeBadge: Record<string, string> = {

@@ -5,7 +5,7 @@
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a1a",
-  "theme_color": "#7C3AED",
+  "theme_color": "#2563EB",
   "orientation": "any",
   "developer": {
     "name": "DroneBug Technologies and Services",

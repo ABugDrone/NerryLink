@@ -7,7 +7,7 @@ import { useTheme } from '@/components/ui/ThemeProvider';
 const gradients = [
   'from-sky-500 to-blue-600',
   'from-emerald-500 to-teal-600',
-  'from-purple-500 to-indigo-600',
+  'from-blue-500 to-blue-600',
 ];
 
 function getInitials(name: string) {
@@ -33,7 +33,7 @@ function MemberCard({
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
       whileHover={{ y: -6, transition: { duration: 0.25 } }}
       className={`glass-elevated rounded-3xl overflow-hidden group relative ${
-        isLight ? '' : 'hover:border-violet-500/40 hover:shadow-lg hover:shadow-violet-500/10'
+        isLight ? '' : 'hover:border-blue-500/40 hover:shadow-lg hover:shadow-blue-500/10'
       }`}
       style={{
         transition: 'all 0.3s ease',
@@ -42,7 +42,7 @@ function MemberCard({
       {/* Gradient border overlay on hover */}
       <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
         style={{
-          background: 'linear-gradient(135deg, rgba(124,58,237,0.3), rgba(236,72,153,0.2))',
+          background: 'linear-gradient(135deg, rgba(37, 99, 235,0.3), rgba(236,72,153,0.2))',
           padding: '1px',
           borderRadius: '24px',
         }}
@@ -53,7 +53,7 @@ function MemberCard({
       {/* Photo area */}
       <div
         className={`relative h-64 sm:h-72 overflow-hidden ${
-          isLight ? 'bg-gradient-to-br from-purple-50 to-purple-100' : 'bg-gradient-to-br from-slate-800 to-slate-900'
+          isLight ? 'bg-gradient-to-br from-blue-50 to-blue-100' : 'bg-gradient-to-br from-slate-800 to-slate-900'
         }`}
       >
         {!imgFailed ? (
@@ -105,8 +105,8 @@ function MemberCard({
         {/* Role pill */}
         <span className={`inline-block mt-2 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full ${
           isLight
-            ? 'bg-purple-100 text-[#6B21A8] border border-purple-200'
-            : 'bg-gradient-to-r from-violet-500/20 to-purple-500/15 text-violet-300 border border-violet-500/40 group-hover:border-violet-400/60 group-hover:shadow-lg group-hover:shadow-violet-500/10 transition-all'
+            ? 'bg-blue-100 text-[#1E40AF] border border-blue-200'
+            : 'bg-gradient-to-r from-blue-500/20 to-blue-500/15 text-blue-300 border border-blue-500/40 group-hover:border-blue-400/60 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all'
         }`}>
           {member.role}
         </span>
@@ -119,7 +119,7 @@ function MemberCard({
             rel="noopener noreferrer"
             className={`inline-flex items-center gap-2 transition-all text-xs font-semibold px-3 py-2 rounded-xl ${
               isLight
-                ? 'text-[#4a2080]/60 hover:text-[#6B21A8] hover:bg-purple-50 border border-transparent hover:border-purple-200/60'
+                ? 'text-[#1E3A8A]/60 hover:text-[#1E40AF] hover:bg-blue-50 border border-transparent hover:border-blue-200/60'
                 : 'text-white/40 hover:text-sky-300 hover:bg-white/8 border border-transparent hover:border-sky-500/30 hover:shadow-lg hover:shadow-sky-500/10'
             }`}
             aria-label={`${member.name} on Facebook`}

@@ -17,7 +17,7 @@ export function FAQSection() {
       <section className="mt-16" aria-labelledby="faq-heading">
         <div className="text-center mb-8">
           <span className={`glass px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest ${
-            isLight ? 'text-[#DC2626]' : 'text-violet-300'
+            isLight ? 'text-[#DC2626]' : 'text-blue-300'
           }`}>
             FAQ
           </span>
@@ -35,7 +35,7 @@ export function FAQSection() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.04, duration: 0.3 }}
               className={`glass-elevated rounded-2xl overflow-hidden transition-all ${
-                openIndex === i ? 'border border-violet-500/30' : ''
+                openIndex === i ? 'border border-blue-500/30' : ''
               }`}
             >
               <button

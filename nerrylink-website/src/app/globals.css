@@ -5,11 +5,11 @@
 
 /* ===================================================
    DESIGN TOKENS — Dark theme (default)
-   Logo palette: Purple #6B21A8, Red #DC2626, White
+   Logo palette: Blue #1E40AF, Red #DC2626, White
    =================================================== */
 :root {
-  --brand-purple: #7C3AED;
-  --brand-purple-dark: #6B21A8;
+  --brand-blue: #2563EB;
+  --brand-blue-dark: #1E40AF;
   --brand-red: #DC2626;
   --brand-red-light: #EF4444;
   --whatsapp-green: #25D366;
@@ -30,30 +30,30 @@
   --border-medium: rgba(255,255,255,0.14);
 
   /* Accents */
-  --accent-primary: var(--brand-purple);
+  --accent-primary: var(--brand-blue);
   --accent-secondary: var(--brand-red);
-  --accent-glow: rgba(124,58,237,0.25);
+  --accent-glow: rgba(37, 99, 235,0.25);
 }
 
 /* ===================================================
    DESIGN TOKENS — Light theme
    =================================================== */
 [data-theme="light"] {
-  --bg-base:    #f8f5ff;
+  --bg-base:    #F0F6FF;
   --bg-surface: #ffffff;
   --bg-card:    #fefefe;
-  --bg-raised:  #f0ebff;
+  --bg-raised:  #E8F1FF;
 
   --text-primary:   #1a0533;
-  --text-secondary: #4a2080;
-  --text-muted:     #8b6aad;
+  --text-secondary: #1E3A8A;
+  --text-muted:     #64748B;
 
-  --border-subtle: rgba(107,33,168,0.10);
-  --border-medium: rgba(107,33,168,0.20);
+  --border-subtle: rgba(30, 64, 175,0.10);
+  --border-medium: rgba(30, 64, 175,0.20);
 
-  --accent-primary: #7C3AED;
+  --accent-primary: #2563EB;
   --accent-secondary: #DC2626;
-  --accent-glow: rgba(124,58,237,0.15);
+  --accent-glow: rgba(37, 99, 235,0.15);
 }
 
 /* ===================================================
@@ -162,9 +162,9 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 /* Light theme body background — pearl gradient with subtle mesh */
 [data-theme="light"] body {
   background-image:
-    radial-gradient(ellipse at 20% 10%, rgba(124,58,237,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 10%, rgba(37, 99, 235,0.08) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 90%, rgba(220,38,38,0.06) 0%, transparent 50%),
-    radial-gradient(ellipse at 60% 40%, rgba(107,33,168,0.05) 0%, transparent 40%);
+    radial-gradient(ellipse at 60% 40%, rgba(30, 64, 175,0.05) 0%, transparent 40%);
   background-attachment: fixed;
 }
 
@@ -182,17 +182,17 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 [data-theme="light"] .text-white\/70 { color: var(--text-secondary) !important; }
 [data-theme="light"] .text-white\/50 { color: var(--text-muted) !important; }
 [data-theme="light"] .text-white\/40 { color: var(--text-muted) !important; }
-[data-theme="light"] .text-white\/30 { color: rgba(74,32,128,0.4) !important; }
+[data-theme="light"] .text-white\/30 { color: rgba(30, 58, 138,0.4) !important; }
 [data-theme="light"] .text-white\/80 { color: var(--text-primary) !important; }
 
-/* Light theme — sky/emerald accents → purple/red */
+/* Light theme — sky/emerald accents → blue/red */
 [data-theme="light"] .text-sky-300,
-[data-theme="light"] .text-sky-400 { color: var(--brand-purple) !important; }
+[data-theme="light"] .text-sky-400 { color: var(--brand-blue) !important; }
 [data-theme="light"] .text-emerald-300,
 [data-theme="light"] .text-emerald-400 { color: #059669 !important; }
 
 /* Light theme section tags */
-[data-theme="light"] .section-tag-purple { color: var(--brand-purple); }
+[data-theme="light"] .section-tag-blue { color: var(--brand-blue); }
 
 /* ===================================================
    LIGHT THEME — BACKGROUND OVERRIDES
@@ -209,15 +209,15 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 /* ===================================================
    LIGHT THEME — CARD / SURFACE OVERRIDES
    =================================================== */
-[data-theme="light"] .bg-white\/5  { background: rgba(107,33,168,0.04) !important; }
+[data-theme="light"] .bg-white\/5  { background: rgba(30, 64, 175,0.04) !important; }
 [data-theme="light"] .bg-white\/10 { background: rgba(255,255,255,0.6) !important; }
-[data-theme="light"] .bg-white\/15 { background: rgba(124,58,237,0.12) !important; }
+[data-theme="light"] .bg-white\/15 { background: rgba(37, 99, 235,0.12) !important; }
 
 /* ===================================================
    LIGHT THEME — GRADIENT TEXT
    =================================================== */
 [data-theme="light"] .brand-gradient {
-  background: linear-gradient(135deg, var(--brand-purple-dark), var(--brand-red));
+  background: linear-gradient(135deg, var(--brand-blue-dark), var(--brand-red));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -227,13 +227,13 @@ h3.font-bold, h3.font-semibold, h3.font-black {
    LIGHT THEME — BUTTONS
    =================================================== */
 [data-theme="light"] .btn-primary-light {
-  background: linear-gradient(135deg, var(--brand-purple), var(--brand-red));
+  background: linear-gradient(135deg, var(--brand-blue), var(--brand-red));
   color: white;
   border: none;
-  box-shadow: 0 4px 16px rgba(124,58,237,0.3);
+  box-shadow: 0 4px 16px rgba(37, 99, 235,0.3);
 }
 [data-theme="light"] .btn-primary-light:hover {
-  box-shadow: 0 6px 24px rgba(124,58,237,0.45);
+  box-shadow: 0 6px 24px rgba(37, 99, 235,0.45);
   transform: translateY(-1px);
 }
 
@@ -242,8 +242,8 @@ h3.font-bold, h3.font-semibold, h3.font-black {
    =================================================== */
 [data-theme="light"] .hero-overlay-light {
   background: linear-gradient(135deg,
-    rgba(248,245,255,0.88) 0%,
-    rgba(240,235,255,0.75) 50%,
+    rgba(240, 246, 255,0.88) 0%,
+    rgba(232, 241, 255,0.75) 50%,
     rgba(255,240,240,0.65) 100%);
 }
 
@@ -254,7 +254,7 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 [data-theme="light"] select,
 [data-theme="light"] textarea {
   background: rgba(255,255,255,0.8) !important;
-  border-color: rgba(107,33,168,0.2) !important;
+  border-color: rgba(30, 64, 175,0.2) !important;
   color: var(--text-primary) !important;
 }
 [data-theme="light"] input::placeholder,
@@ -264,9 +264,9 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 [data-theme="light"] input:focus,
 [data-theme="light"] select:focus,
 [data-theme="light"] textarea:focus {
-  border-color: var(--brand-purple) !important;
+  border-color: var(--brand-blue) !important;
   background: rgba(255,255,255,0.95) !important;
-  box-shadow: 0 0 0 3px rgba(124,58,237,0.12) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235,0.12) !important;
 }
 
 /* ===================================================
@@ -277,8 +277,8 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 }
 [data-theme="light"] .nav-link-light:hover,
 [data-theme="light"] .nav-link-light.active {
-  color: var(--brand-purple);
-  background: rgba(124,58,237,0.08);
+  color: var(--brand-blue);
+  background: rgba(37, 99, 235,0.08);
 }
 
 /* ===================================================
@@ -286,7 +286,7 @@ h3.font-bold, h3.font-semibold, h3.font-black {
    =================================================== */
 [data-theme="light"] footer {
   background: rgba(255,255,255,0.7) !important;
-  border-top-color: rgba(107,33,168,0.15) !important;
+  border-top-color: rgba(30, 64, 175,0.15) !important;
 }
 
 /* ===================================================
@@ -294,12 +294,12 @@ h3.font-bold, h3.font-semibold, h3.font-black {
    =================================================== */
 [data-theme="light"] .product-card-light {
   background: rgba(255,255,255,0.75);
-  border: 1px solid rgba(107,33,168,0.12);
-  box-shadow: 0 2px 16px rgba(107,33,168,0.06);
+  border: 1px solid rgba(30, 64, 175,0.12);
+  box-shadow: 0 2px 16px rgba(30, 64, 175,0.06);
 }
 [data-theme="light"] .product-card-light:hover {
-  border-color: var(--brand-purple);
-  box-shadow: 0 8px 32px rgba(124,58,237,0.18);
+  border-color: var(--brand-blue);
+  box-shadow: 0 8px 32px rgba(37, 99, 235,0.18);
 }
 
 /* Product card text — visible in both themes */
@@ -311,14 +311,14 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 
 /* Product card media background */
 [data-theme="light"] .glass .bg-white\/5 {
-  background: rgba(107,33,168,0.06) !important;
+  background: rgba(30, 64, 175,0.06) !important;
 }
 
 /* Category tab buttons — active state in light mode */
 [data-theme="light"] button[aria-selected="true"] {
-  background: rgba(124,58,237,0.15) !important;
-  border-color: rgba(124,58,237,0.4) !important;
-  color: var(--brand-purple) !important;
+  background: rgba(37, 99, 235,0.15) !important;
+  border-color: rgba(37, 99, 235,0.4) !important;
+  color: var(--brand-blue) !important;
 }
 
 /* Category tab buttons — inactive state in light mode */
@@ -331,13 +331,13 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 
 /* Client type badges on cards */
 [data-theme="light"] .glass .border-white\/15 {
-  border-color: rgba(107,33,168,0.2) !important;
+  border-color: rgba(30, 64, 175,0.2) !important;
   color: var(--text-muted) !important;
 }
 
 /* Refurbished / Wholesale badge text stays white (on coloured bg) */
 [data-theme="light"] .bg-amber-500\/80,
-[data-theme="light"] .bg-purple-500\/80 {
+[data-theme="light"] .bg-blue-500\/80 {
   color: #fff !important;
 }
 
@@ -359,9 +359,9 @@ h3.font-bold, h3.font-semibold, h3.font-black {
    LIGHT THEME — COUNTDOWN TIMER
    =================================================== */
 [data-theme="light"] .countdown-unit {
-  background: rgba(124,58,237,0.08);
-  border: 1px solid rgba(124,58,237,0.2);
-  color: var(--brand-purple);
+  background: rgba(37, 99, 235,0.08);
+  border: 1px solid rgba(37, 99, 235,0.2);
+  color: var(--brand-blue);
 }
 
 /* ===================================================
@@ -379,8 +379,8 @@ h3.font-bold, h3.font-semibold, h3.font-black {
   flex-shrink: 0;
 }
 [data-theme="light"] .theme-toggle {
-  border-color: rgba(107,33,168,0.3);
-  background: rgba(124,58,237,0.1);
+  border-color: rgba(30, 64, 175,0.3);
+  background: rgba(37, 99, 235,0.1);
 }
 .theme-toggle-knob {
   position: absolute;
@@ -398,7 +398,7 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 }
 [data-theme="light"] .theme-toggle-knob {
   transform: translateX(24px);
-  background: var(--brand-purple);
+  background: var(--brand-blue);
 }
 
 /* ===================================================
@@ -450,28 +450,28 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 /* Light */
 [data-theme="light"] .product-card {
   background: rgba(255,255,255,0.82) !important;
-  border: 1px solid rgba(107,33,168,0.15) !important;
-  box-shadow: 0 2px 16px rgba(107,33,168,0.07) !important;
+  border: 1px solid rgba(30, 64, 175,0.15) !important;
+  box-shadow: 0 2px 16px rgba(30, 64, 175,0.07) !important;
 }
 [data-theme="light"] .product-card:hover {
-  border-color: var(--brand-purple) !important;
-  box-shadow: 0 8px 32px rgba(124,58,237,0.18) !important;
+  border-color: var(--brand-blue) !important;
+  box-shadow: 0 8px 32px rgba(37, 99, 235,0.18) !important;
 }
 [data-theme="light"] .product-card-media {
-  background: rgba(107,33,168,0.06) !important;
+  background: rgba(30, 64, 175,0.06) !important;
 }
 
 /* Category tab — active in light mode */
 [data-theme="light"] .tab-active {
-  background: rgba(124,58,237,0.15) !important;
-  border-color: rgba(124,58,237,0.45) !important;
-  color: var(--brand-purple) !important;
+  background: rgba(37, 99, 235,0.15) !important;
+  border-color: rgba(37, 99, 235,0.45) !important;
+  color: var(--brand-blue) !important;
 }
 
 /* Client type badge in light mode */
 [data-theme="light"] .client-badge {
-  background: rgba(107,33,168,0.06) !important;
-  border-color: rgba(107,33,168,0.2) !important;
+  background: rgba(30, 64, 175,0.06) !important;
+  border-color: rgba(30, 64, 175,0.2) !important;
 }
 
 /* ===================================================
@@ -493,13 +493,13 @@ h3.font-bold, h3.font-semibold, h3.font-black {
    GRADIENT TEXT UTILITY
    =================================================== */
 .brand-gradient-text {
-  background: linear-gradient(135deg, #7C3AED, #DC2626);
+  background: linear-gradient(135deg, #2563EB, #DC2626);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.brand-gradient-text-violet {
-  background: linear-gradient(135deg, #a78bfa, #c4b5fd);
+.brand-gradient-text-blue {
+  background: linear-gradient(135deg, #60A5FA, #93C5FD);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -513,7 +513,7 @@ h3.font-bold, h3.font-semibold, h3.font-black {
   100% { background-position: 200% center; }
 }
 .shimmer-text {
-  background: linear-gradient(90deg, #a78bfa 0%, #f0abfc 40%, #a78bfa 80%);
+  background: linear-gradient(90deg, #60A5FA 0%, #93C5FD 40%, #60A5FA 80%);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -525,8 +525,8 @@ h3.font-bold, h3.font-semibold, h3.font-black {
    GLOW PULSE ANIMATION
    =================================================== */
 @keyframes glowPulse {
-  0%, 100% { box-shadow: 0 0 12px rgba(124,58,237,0.2); }
-  50%       { box-shadow: 0 0 28px rgba(124,58,237,0.5); }
+  0%, 100% { box-shadow: 0 0 12px rgba(37, 99, 235,0.2); }
+  50%       { box-shadow: 0 0 28px rgba(37, 99, 235,0.5); }
 }
 .animate-glow-pulse {
   animation: glowPulse 2.5s ease-in-out infinite;
@@ -540,7 +540,7 @@ h3.font-bold, h3.font-semibold, h3.font-black {
   width: 48px;
   height: 3px;
   border-radius: 999px;
-  background: linear-gradient(90deg, #7C3AED, #DC2626);
+  background: linear-gradient(90deg, #2563EB, #DC2626);
   margin: 12px auto 0;
 }
 
@@ -569,13 +569,13 @@ h3.font-bold, h3.font-semibold, h3.font-black {
    GLOW UTILITIES
    =================================================== */
 .glow {
-  box-shadow: 0 0 20px rgba(124,58,237,0.3), 0 0 40px rgba(124,58,237,0.15);
+  box-shadow: 0 0 20px rgba(37, 99, 235,0.3), 0 0 40px rgba(37, 99, 235,0.15);
 }
 .glow-sm {
-  box-shadow: 0 0 12px rgba(124,58,237,0.25);
+  box-shadow: 0 0 12px rgba(37, 99, 235,0.25);
 }
 .glow-lg {
-  box-shadow: 0 0 32px rgba(124,58,237,0.4), 0 0 64px rgba(124,58,237,0.2);
+  box-shadow: 0 0 32px rgba(37, 99, 235,0.4), 0 0 64px rgba(37, 99, 235,0.2);
 }
 .glow-red {
   box-shadow: 0 0 20px rgba(220,38,38,0.3), 0 0 40px rgba(220,38,38,0.15);
@@ -590,7 +590,7 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 .gradient-border {
   position: relative;
   border-radius: 16px;
-  background: linear-gradient(135deg, rgba(124,58,237,0.1), rgba(220,38,38,0.1)) border-box;
+  background: linear-gradient(135deg, rgba(37, 99, 235,0.1), rgba(220,38,38,0.1)) border-box;
   border: 2px solid transparent;
   background-clip: padding-box;
 }
@@ -600,7 +600,7 @@ h3.font-bold, h3.font-semibold, h3.font-black {
   inset: 0;
   border-radius: 16px;
   padding: 2px;
-  background: linear-gradient(135deg, #7C3AED, #DC2626);
+  background: linear-gradient(135deg, #2563EB, #DC2626);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -630,7 +630,7 @@ h3.font-bold, h3.font-semibold, h3.font-black {
 
 /* Light theme shimmer */
 [data-theme="light"] .shimmer {
-  background: linear-gradient(90deg, rgba(124,58,237,0.05) 0%, rgba(124,58,237,0.15) 50%, rgba(124,58,237,0.05) 100%);
+  background: linear-gradient(90deg, rgba(37, 99, 235,0.05) 0%, rgba(37, 99, 235,0.15) 50%, rgba(37, 99, 235,0.05) 100%);
 }
 
 /* ===================================================
@@ -640,7 +640,7 @@ h3.font-bold, h3.font-semibold, h3.font-black {
   transition: box-shadow 0.3s ease;
 }
 .hover-glow:hover {
-  box-shadow: 0 0 24px rgba(124,58,237,0.4), 0 0 48px rgba(124,58,237,0.2);
+  box-shadow: 0 0 24px rgba(37, 99, 235,0.4), 0 0 48px rgba(37, 99, 235,0.2);
 }
 
 /* ===================================================
